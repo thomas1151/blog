@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply font-body font-light bg-gray-100;
+}
+h1,h2{
+    @apply break-words;
+}
+.avec-triangle:after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -7em;
+    width: 0;
+    height: 0;
+    border-top: solid 3em transparent;
+    border-top-color: inherit;
+    border-left: solid 7em transparent;
+    border-right: solid 7em transparent;
+}
+header p{
+    @apply pb-4
+}
+header a{
+  @apply inline-block p-4 mt-4 bg-white shadow-md border-gray-300 font-display text-blue-900 border-l-8 border-gray-300 transition-all duration-200;
+}
+
+header a:hover{
+    @apply border-orange-500 text-white bg-blue-900 pr-16 rounded-md;
+}
+

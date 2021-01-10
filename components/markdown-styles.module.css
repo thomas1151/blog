@@ -1,0 +1,40 @@
+.markdown {
+  @apply leading-relaxed font-body font-thin;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol {
+  @apply py-2 break-words;
+}
+
+.markdown blockquote{
+    @apply border-t  mx-6 border-b border-blue-300 ;
+}
+.markdown blockquote p{
+    @apply my-2 py-2 font-display text-blue-600;
+
+}
+.markdown h2 {
+  @apply text-3xl mt-12 mb-4 leading-snug break-words;
+}
+
+.markdown h3 {
+  @apply text-2xl mt-8 mb-4 leading-snug break-words;
+}
+
+.markdown img{
+  @apply shadow-md;
+}
+
+.markdown a{
+  @apply border-dotted border-b border-gray-500 font-display;
+}
+
+.markdown a:hover{
+  @apply border-transparent underline text-blue-500;
+}
+
+.markdown ul li{
+    @apply list-disc mx-4	
+}
