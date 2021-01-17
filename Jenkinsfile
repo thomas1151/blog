@@ -14,6 +14,11 @@ pipeline {
                 sh 'npm install' 
             }
         }
+        stage('Generate Ownership'){
+            steps {
+                sh "chmod +x -R ${env.WORKSPACE}"
+            }
+        }
         // stage('Test') {
         //     steps {
         //         sh './jenkins/scripts/test.sh'
