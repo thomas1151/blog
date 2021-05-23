@@ -1,12 +1,17 @@
 import markdownStyles from './markdown-styles.module.css'
 import cn from 'classnames'
+import Image from 'next/image'
+import useResize from '../hooks/useResize'
+import { useRef } from 'react'
+import SectionTitle from './sectionTitle'
 
-export default function GenericCard({ title, content, image, className, showTitle=true }) {
-
+export default function GenericCard({ title, content, image, className, showTitle=true, imageAlt="", moreUrl }) {
+    const componentRef = useRef()
+    const { width, height } = useResize(componentRef)
     return(
-        <div className={cn("w-full  z-10", {[className]: className})}>
-            {showTitle && title && <h2 className="font-display tracking-tighter leading-tight font-display underline pb-4 text-3xl md:text-4xl">{title}</h2>}
-            <div className='w-full border-t border-gray-300 flex flex-wrap shadow-md bg-white' >
+        <div className={cn("w-full z-10 ", {[className]: className})}>
+            {showTitle && title && <SectionTitle title={title} moreUrl={moreUrl} />}
+            <div className='w-full flex flex-wrap shadow-md bg-gray-50 dark:bg-gray-900 dark:text-gray-50' >
                 { content &&
                     <div
                         className={`${markdownStyles['markdown']} px-4 py-2  ${image ? 'w-full md:w-3/4' : ' w-full'}`}
@@ -14,13 +19,18 @@ export default function GenericCard({ title, content, image, className, showTitl
                     />
                 }
                 { image && 
-                    <div class={cn("w-full border-t  md:border-l md:border-t-0 border-gray-300 flex w-full mx-auto",
+                    <div ref={componentRef} className={cn("align-middle	w-full border-t relative md:border-l md:border-t-0 border-gray-200 dark:border-gray-700 flex mx-auto py-4 height-xxs",
                                 {" md:w-1/4": content})}>
-                        <img
-                            src={image}
-                            alt="Picture of the author"
-                            className="mx-auto max-h-25vh py-8 self-center px-2"
-                        />
+                        <div className="relative w-full ">            
+                                <Image
+                                layout='fill' 
+                                objectFit='contain'
+                                src={image}
+                                alt={imageAlt}
+                                className="mx-auto  py-8 self-center px-2"
+                                />
+                        </div>
+                        <div className="my-24" />
                     </div>
                 }
             </div>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    @apply font-body font-light bg-gray-100;
+    @apply font-body font-light bg-gray-100 dark:bg-gray-800;
 }
 h1,h2{
     @apply break-words;
@@ -25,10 +25,13 @@ header p{
     @apply pb-4
 }
 header a{
-  @apply inline-block p-4 mt-4 bg-white shadow-md border-gray-300 font-display text-blue-900 border-l-8 border-gray-300 transition-all duration-200;
+  @apply inline-block p-4 mt-4 mr-2 bg-white dark:bg-gray-900 shadow-md border-gray-300 font-display text-blue-900 dark:text-gray-50 border-l-8 border-gray-300 dark:border-gray-800 transition-all duration-200;
 }
 
 header a:hover{
-    @apply border-orange-500 text-white bg-blue-900 pr-16 rounded-md;
+    @apply border-yellow-500 dark:border-red-600 text-white bg-blue-900 dark:text-gray-900 dark:bg-secondary pr-16 rounded-md;
 }
 
+header li{
+    @apply inline-block
+}

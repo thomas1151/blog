@@ -5,7 +5,7 @@ import PostBody from '../../components/post-body'
 import Header from '../../components/header'
 import PostHeader from '../../components/post-header'
 import Layout from '../../components/layout'
-import { getPostBySlug, getAllPosts, getExperienceBySlug, getAllExperience } from '../../lib/api'
+import { getPostBySlug, getAllPosts, getExperienceBySlug, getAllExperience, API } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
@@ -24,7 +24,7 @@ export default function Experience({ post, morePosts, preview }) {
 
     const sidebar = <GenericCard image={generateAssetUrl(post.componentType, post.slug, post.coverImage)}/>
     return (
-        <BasicPage post={post} router={router} sidebar={sidebar}>
+        <BasicPage post={post} router={router} sidebar={sidebar} disableHeaderImage={true} alwaysShowTitle={true} >
             <Head>
                 <title>
                     {post.title} | {CMS_NAME}
@@ -38,7 +38,7 @@ export default function Experience({ post, morePosts, preview }) {
 }
 
 export async function getStaticProps({ params }) {
-    const post = getExperienceBySlug(params.slug, [
+    const post = API.GET.EXPERIENCE(params.slug, [
         'title',
         'subtitle',
         'summary',
@@ -64,7 +64,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const posts = getAllExperience(['slug'])
+    const posts = API.ALL.EXPERIENCE(['slug'])
 
     return {
         paths: posts.map((post) => {

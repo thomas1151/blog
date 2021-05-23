@@ -12,11 +12,11 @@
     @apply border-t  mx-6 border-b border-blue-300 ;
 }
 .markdown blockquote p{
-    @apply my-2 py-2 font-display text-blue-600;
+    @apply my-2 py-2 font-display text-blue-600 dark:text-blue-200;
 
 }
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug break-words;
+  @apply font-display text-3xl mt-12 mb-4 leading-snug break-words;
 }
 
 .markdown h3 {
@@ -37,4 +37,16 @@
 
 .markdown ul li{
     @apply list-disc mx-4	
+}
+
+.markdown h2,
+.markdown h3,
+.markdown a,
+.markdown p,
+.markdown ul li{
+  @apply dark:text-white
+}
+
+.markdown pre {
+  @apply dark:text-gray-100
 }

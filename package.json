@@ -1,5 +1,5 @@
 {
-  "name": "learn-starter",
+  "name": "thomasbarratt-site",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,16 +12,19 @@
     "date-fns": "2.10.0",
     "gray-matter": "4.0.2",
     "highlight.js": "^10.3.2",
-    "next": "^9.5.5",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "next": "^10.2.0",
+    "react": "^17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "react-intersection-observer": "^8.31.1",
     "react-markdown": "^5.0.2",
-    "remark": "11.0.2",
+    "remark": "^13.0.0",
     "remark-highlight.js": "^6.0.0",
-    "remark-html": "10.0.0"
+    "remark-html": "^13.0.1"
   },
   "devDependencies": {
-    "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.9.6"
+    "tailwindcss": "^2.1.2",
+    "postcss": "^8.2.10",
+    "postcss-preset-env": "^6.7.0"
   }
 }

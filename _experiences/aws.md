@@ -6,10 +6,10 @@ summary: "Working on placement as a L4 Software Development Engineer for the pla
 url: 'https://aws.amazon.com/rds/'
 color: amazon-orange
 coverImage: 'cover.png'
-isSquare: true
 
 ---
 
+>  June 2020 - July 2021
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed eleifend ex. Nunc et tincidunt libero. Quisque ac malesuada orci. Proin aliquam, leo quis volutpat ultricies, arcu augue pulvinar odio, eu pharetra libero arcu ac risus. Donec rhoncus ante ut aliquet scelerisque. Donec dapibus sem at aliquam condimentum. Vestibulum at porta metus. Sed pulvinar nibh ut sodales elementum. Curabitur ultrices sapien vel justo viverra, at venenatis felis aliquam. Aenean vestibulum ex ut faucibus facilisis. Phasellus in libero vel neque pharetra hendrerit nec eu libero. Nulla sed posuere felis. Quisque vel malesuada quam. Donec mollis enim in est mattis, vitae aliquet libero rutrum.
 

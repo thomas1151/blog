@@ -1,14 +1,11 @@
 import PostPreview from '../components/post-preview'
+import SectionTitle from './sectionTitle';
 
-export default function MoreStories({ posts, title, maxCols=2 }) {
+export default function MoreStories({ posts, title, maxCols=2, moreUrl }) {
   return (
     <section>
-      { title &&
-        <h2 className="mt-6 mb-4 text-3xl md:text-4xl font-bold tracking-tighter leading-tight font-display mb-2 underline">
-          {title}
-        </h2>
-      }
-      <div className={`grid grid-cols-1 md:grid-cols-${maxCols} md:col-gap-8 lg:col-gap-8 row-gap-8`}>
+      { title && <SectionTitle title={title} moreUrl={moreUrl} /> }
+      <div className={`grid grid-cols-1 md:grid-cols-${maxCols} gap-x-2 md:gap-x-4 lg:gap-x-8 gap-y-8`}>
         {posts.map((post) => (
           <PostPreview
             key={post.slug}

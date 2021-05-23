@@ -16,19 +16,19 @@ export default function PostPreview({
 }) {
   const url = generateUrl(componentType, slug)
   return (
-    <div className="bg-white shadow-md">
+    <div className="bg-white shadow-md dark:bg-gray-900 dark:text-white">
       <div className="mb-5">
         <CoverImage slug={slug} title={title} src={generateAssetUrl(componentType, slug, coverImage)} isSquare={isSquare} urlPacket={url} />
       </div>
       <div className="px-4">
-      <h3 className="text-3xl mb-3 leading-snug">
-          <Link as={url.as} href={url.href}>
+      <h3 className="text-2xl sm:text-3xl mb-1 sm:mb-3 leading-snug">
+          <Link href={url.as} href={url.href}>
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
-      <div className="text-lg mb-4">
-        { date && <DateFormatter dateString={date} /> }
-      </div>
+      {date && <div className="text-lg mb-1 sm:mb-4">
+         <DateFormatter dateString={date} /> 
+      </div>}
       <p className="text-md leading-relaxed mb-4">{summary}</p>
       </div>
     </div>

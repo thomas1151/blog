@@ -1,9 +1,14 @@
 import { CMS_NAME } from '../lib/constants'
 import Header from './header'
 
-export default function Intro({ title, content }) {
+export default function Intro({ title, content, alwaysShowTitle }) {
   return (
-    <Header title={title} subtitle={content} showTriangle={true} smallHeader={true}
+    <Header 
+      title={title} 
+      subtitle={content} 
+      showTriangle={true} 
+      smallHeader={true}
+      alwaysShowTitle={alwaysShowTitle}
     />
     // <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
     //   <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">

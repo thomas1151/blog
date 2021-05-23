@@ -1,8 +1,19 @@
+const customColors = {
+  'primary': '#03A9F4',
+  'secondary': '#ecbe45',
+  'danger': '#e3342f',
+  'amazon-orange': '#FF9900',
+  'sheffield-purple': '#211551',
+  'transparentish': "rgba(50,50,50,0.3)",
+  'mustard-yellow': '#FF6F1D',
+}
+
 module.exports = {
   future: {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
+  darkMode: 'media',
   purge: [],
   theme: {
     fontFamily: {
@@ -13,18 +24,11 @@ module.exports = {
     },
     backgroundColor: theme => ({
        ...theme('colors'),
-      'primary': '#03A9F4',
-      'secondary': '#ffed4a',
-      'danger': '#e3342f',
-      'amazon-orange': '#FF9900',
-      'sheffield-purple': '#211551',
-      'transparentish': "rgba(50,50,50,0.3)"
+      ...customColors,
     }),
     borderColor: theme => ({
       ...theme('colors'),
-      'primary': '#03A9F4',
-      'secondary': '#ffed4a',
-      'danger': '#e3342f',
+      ...customColors,
     }),
     
     extend: {
@@ -46,6 +50,7 @@ module.exports = {
       },
       opacity:{
         '85': '.85',
+        '90': '.95',
       },
       fontSize: {
         '7xl': '5rem',

@@ -1,12 +1,7 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import Container from '../../components/container'
 import PostBody from '../../components/post-body'
-import Header from '../../components/header'
-import PostHeader from '../../components/post-header'
-import Layout from '../../components/layout'
-import { getPostBySlug, getAllPosts } from '../../lib/api'
-import PostTitle from '../../components/post-title'
+import { API } from '../../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
@@ -19,22 +14,22 @@ export default function Post({ post, morePosts, preview }) {
     }
     return (
         <BasicPage post={post} router={router}>
-            <article className="mb-32 max-w-screen-xl">
+            <div className="mb-32 max-w-screen-xl">
                 <Head>
                     <title>
                         {post.title} | {CMS_NAME}
                     </title>
                     <meta property="og:image" content={post.ogImage.url} />
                 </Head>
-                <PostBody content={post.content} />
-            </article>
+                <PostBody content={post.content} contentMeta={`Published: ${new Date(post.date).toLocaleDateString()}`} />
+            </div>
         </BasicPage>
 
     )
 }
 
 export async function getStaticProps({ params }) {
-    const post = getPostBySlug(params.slug, [
+    const post = API.GET.BLOG(params.slug, [
         'title',
         'subtitle',
         'summary',
@@ -59,8 +54,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const posts = getAllPosts(['slug'])
-
+    const posts = API.ALL.BLOG(['slug']);
     return {
         paths: posts.map((post) => {
             return {

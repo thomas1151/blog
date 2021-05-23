@@ -5,7 +5,7 @@ import PostBody from '../../components/post-body'
 import Header from '../../components/header'
 import PostHeader from '../../components/post-header'
 import Layout from '../../components/layout'
-import { getPostBySlug, getAllPosts, getExperienceBySlug, getAllExperience, getComponentBodyBySlug } from '../../lib/api'
+import { API } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
@@ -17,7 +17,7 @@ export default function ExperienceIndex({ experience, content, preview }) {
     const router = useRouter();
     return (
         <Layout preview={preview}>
-            <Header {...content} />
+            <Header {...content} disableHeaderImage={true} alwaysShowTitle={true} />
             <Container>
                 {router.isFallback ? (
                     <PostTitle>Loading…</PostTitle>
@@ -28,17 +28,15 @@ export default function ExperienceIndex({ experience, content, preview }) {
                         </div>
                     )}
             </Container>
-
         </Layout>
     )
 }
 
 export async function getStaticProps({ params }) {
-
     return {
         props:{ 
-            experience: getAllExperience(['title', 'content', 'summary', 'image', 'coverImage', 'slug', 'isSquare']),
-            content: getComponentBodyBySlug('experience', ['title', 'subtitle', 'content', 'image'])
+            experience: API.ALL.EXPERIENCE(['title', 'content', 'summary', 'image', 'coverImage', 'slug', 'isSquare']),
+            content: API.GET.COMPONENT('experience', ['title', 'subtitle', 'content', 'image', 'bgColor', 'accentColor'])
         }
     }
 }
