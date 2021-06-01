@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 const MENUITEMS = [
     { title: 'Blog', href:"/blog" },
-    { title: 'Experiences', href:"/experiences" },
+    { title: 'Experiences', href:"/experience" },
     { title: 'Contact', href:"/contact" },
 ]
 export default function NavBar({ atTop, alwaysShowTitle }){

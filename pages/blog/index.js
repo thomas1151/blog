@@ -31,7 +31,7 @@ export async function getStaticProps({ params }) {
 
     return {
         props: {
-            posts: API.ALL.BLOG(['title', 'content', 'summary', 'image', 'coverImage', 'slug', 'isSquare']),
+            posts: API.ALL.BLOG(['title', 'content', 'summary', 'image', 'coverImage', 'slug', 'isSquare', 'date']),
             content: API.GET.COMPONENT('posts', ['title', 'subtitle', 'content', 'image', 'bgColor', 'accentColor'])
         }
     }

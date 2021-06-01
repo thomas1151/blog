@@ -34,7 +34,7 @@ export default function Index({posts, components, experience}) {
             )}
           </div>
 
-          <GenericCard {...components.experience} className="py-4 my-4" moreUrl='/experiences'></GenericCard>
+          <GenericCard {...components.experience} className="py-4 my-4" moreUrl='/experience'></GenericCard>
           {experience.length > 0 && <MoreStories maxCols='3' posts={experience} />}
 
           <div className="pb-8">
