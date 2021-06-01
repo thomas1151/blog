@@ -23,9 +23,5 @@ phases:
       - npm run export
 artifacts:
   files:
-    - out/*
-    - .next/**/*
-    - locales/**/*
-    - static/**/*
-    - package.json
-    - next.config.js
+    - '**/*'
+  base-directory: 'out'
