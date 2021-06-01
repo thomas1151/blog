@@ -7,9 +7,11 @@ env:
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 12
     commands:
+      - echo Install nvm for latest Node
+      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash . ~/.nvm/nvm.sh
+      - echo use nvm to install node
+      - nvm install node
       - echo Installing dependency...
       - npm install -g next
       - npm install
