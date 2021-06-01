@@ -9,8 +9,10 @@ phases:
   install:
     commands:
       - echo Install nvm for latest Node
-      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash . ~/.nvm/nvm.sh
+      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+      - NVM_DIR=/root/.nvm
       - chmod +x ~/.nvm/nvm.sh
+      - bash . /root/.nvm/nvm.sh && nvm install node 
       - echo use nvm to install node
       - nvm install node
       - echo Installing dependency...
