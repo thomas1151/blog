@@ -13,8 +13,6 @@ phases:
       - NVM_DIR=/root/.nvm
       - chmod +x ~/.nvm/nvm.sh
       - . /root/.nvm/nvm.sh && source /root/.nvm/nvm.sh && nvm install node 
-      - echo use nvm to install node
-      - nvm install node
       - echo Installing dependency...
       - npm install -g next
       - npm install
