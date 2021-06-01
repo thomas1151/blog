@@ -14,7 +14,7 @@ export default function NavBar({ atTop, alwaysShowTitle }){
 
     return(
         <div className={cn("fixed w-full z-50 md:overflow-hidden",{
-            'bg-primary border-b-4 border-blue-500 shadow-lg dark:bg-blue-900' : !atTop
+            'bg-primary border-b-4 border-blue-500 shadow-lg dark:bg-dark-primary' : !atTop
         })}>
                 <div className="relative z-10 pt-3 sm:pt-6 max-w-screen-xl lg:w-full mx-auto ">
                     <div>
@@ -47,7 +47,7 @@ export default function NavBar({ atTop, alwaysShowTitle }){
                                 <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                                 {MENUITEMS.map((menuItem) => (
                                     <Link href={menuItem.href}>
-                                        <a className="font-medium text-gray-100 hover:text-gray-900 border-1">{menuItem.title}</a>
+                                        <a className="text-lg text-gray-100 font-medium hover:text-gray-900 dark:hover:text-secondary">{menuItem.title}</a>
                                     </Link>
                                 ))}
                                 </div>

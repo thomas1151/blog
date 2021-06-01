@@ -6,6 +6,7 @@ const customColors = {
   'sheffield-purple': '#211551',
   'transparentish': "rgba(50,50,50,0.3)",
   'mustard-yellow': '#FF6F1D',
+  'dark-primary': '#000030'
 }
 
 module.exports = {
@@ -16,22 +17,8 @@ module.exports = {
   darkMode: 'media',
   purge: [],
   theme: {
-    fontFamily: {
-      'display': ['Poppins', "sans-serif"],
-      'body': ["Roboto Slab", "serif"],
-      'sans-serif': ['Poppins', "sans-serif"],
-      'serif': ["Roboto Slab", "serif"]
-    },
-    backgroundColor: theme => ({
-       ...theme('colors'),
-      ...customColors,
-    }),
-    borderColor: theme => ({
-      ...theme('colors'),
-      ...customColors,
-    }),
-    
     extend: {
+      colors: customColors,
       maxHeight:{
         '3/4': '75%',
         '25vh': '25vh',
@@ -56,6 +43,20 @@ module.exports = {
         '7xl': '5rem',
       }
     },
+    fontFamily: {
+      'display': ['Poppins', "sans-serif"],
+      'body': ["Roboto Slab", "serif"],
+      'sans-serif': ['Poppins', "sans-serif"],
+      'serif': ["Roboto Slab", "serif"]
+    },
+    backgroundColor: theme => ({
+      ...theme('colors'),
+      ...customColors,
+    }),
+    borderColor: theme => ({
+      ...theme('colors'),
+      ...customColors,
+    }),
   },
   variants: {},
   plugins: [],

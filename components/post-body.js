@@ -7,11 +7,11 @@ export default function PostBody({ content, contentMeta }) {
   return (
     <>
 
-      <div className="max-w-screen-lg bg-gray-100 dark:bg-gray-700 p-4 font-display dark:text-white">
+      <div className="max-w-screen-lg bg-gray-50 dark:bg-gray-900 px-8 pt-4 pb-2 font-display dark:text-white border-t border-primary dark:border-gray-500">
         {Breadcrumbs()}
       </div>
       {contentMeta && 
-        <div className="max-w-screen-lg bg-gray-100 dark:bg-gray-700 p-4 font-display dark:text-white">
+        <div className="max-w-screen-lg bg-gray-50 dark:bg-gray-900 px-8 pb-4 pt-2 dark:text-white border-b border-primary dark:border-gray-500">
           { contentMeta }
         </div>
       }

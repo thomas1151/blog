@@ -13,7 +13,7 @@ export default function Post({ post, morePosts, preview }) {
         return <ErrorPage statusCode={404} />
     }
     return (
-        <BasicPage post={post} router={router}>
+        <BasicPage post={post} router={router} smallHeader={true}>
             <div className="mb-32 max-w-screen-xl">
                 <Head>
                     <title>

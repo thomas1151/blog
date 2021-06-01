@@ -15,7 +15,7 @@ const convertBreadcrumb = string => {
 const breadcrumbLink = ({ href, breadcrumb }) => (
     <Link href={href}>
         <a className="">
-            <span className="hover:text-blue-600 dark:hover:text-yellow-500">
+            <span className="text-primary hover:text-yellow-500">
                 {convertBreadcrumb(breadcrumb)}
             </span>
             <span className="font-black px-2">/</span>
@@ -30,6 +30,7 @@ export const Breadcrumbs = () => {
         if (router) {
             const linkPath = router.asPath.split('/');
             linkPath.shift();
+            linkPath.pop();
 
             const pathArray = linkPath.map((path, i) => {
                 return { breadcrumb: path, href: '/' + linkPath.slice(0, i + 1).join('/') };
@@ -49,8 +50,6 @@ export const Breadcrumbs = () => {
         <nav aria-label="breadcrumbs" className="inline-block hover:text-primary">
             <ol className="breadcrumb">
                 {breadcrumbLink({ href: '/', breadcrumb: 'Home'})}
-
-
                 {breadcrumbs.map((breadcrumb, i) => {
                     return (
                         <li key={breadcrumb.href} className="inline">

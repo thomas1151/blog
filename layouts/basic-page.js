@@ -5,10 +5,10 @@ import PostTitle from '../components/post-title'
 import cn from 'classnames'
 import { generateAssetUrl } from '../lib/utils'
 
-export default function BasicPage({post, children, sidebar, preview, disableHeaderImage, router }) {
+export default function BasicPage({post, children, sidebar, preview, disableHeaderImage, router, smallHeader }) {
     return (
         <Layout preview={preview}>
-            <Header {...post} coverImageUrl={generateAssetUrl(post.componentType, post.slug, post.coverImage)} disableHeaderImage={disableHeaderImage} alwaysShowTitle={true} />
+            <Header {...post} smallHeader={smallHeader} coverImageUrl={generateAssetUrl(post.componentType, post.slug, post.coverImage)} disableHeaderImage={disableHeaderImage} alwaysShowTitle={true} />
             <Container>
                 {router && router.isFallback ? (
                     <PostTitle>Loading…</PostTitle>

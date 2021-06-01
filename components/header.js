@@ -35,17 +35,17 @@ export default function Header(props) {
             cn(`absolute h-full w-full `,
               {
                 [`bg-${props.bgColor} border-${props.bgColor}`]: (props.bgColor && (props.disableHeaderImage || !props.coverImageUrl)),
-                'bg-primary border-primary dark:bg-blue-900 dark:border-blue-900': !props.bgColor && !props.coverImageUrl,
+                'bg-primary border-primary dark:bg-dark-primary dark:border-dark-primary': !props.bgColor && !props.coverImageUrl,
                 'bg-transparentish': props.coverImageUrl && !props.disableHeaderImage,
                 'avec-triangle': props.showTriangle
               }
             )
           }></div>
-        <div ref={ref} className={`md:flex rounded-lg ${props.smallHeader ? 'pb-24 pt-32' : 'py-40'} justify-left text-white dark:text-gray-50 relative max-w-screen-xl mx-auto px-4 xl:px-0`}>
+        <div ref={ref} className={`md:flex rounded-lg ${props.smallHeader ? 'pb-20 pt-36' : 'py-40'} justify-left text-white dark:text-gray-50 relative max-w-screen-xl mx-auto px-4 xl:px-0`}>
           <div className='text-left sm:px-4'>
-            <h2 className={cn('text-5xl md:text-7xl font-display tracking-tighter leading-none', {'mb-4': !props.date})}>{props.title}</h2>
+            <h2 className={cn('text-6xl lg:text-7xl font-display tracking-tighter leading-none', {'mb-4': !props.date})}>{props.title}</h2>
             {props.date && <div className='text-2xl font-display md:text-3xl tracking-tight opacity-90 pb-4 mb-4'>{ new Date(props.date).toLocaleDateString()}</div>}
-            <div className='text-2xl md:text-3xl  font-light tracking-tight opacity-90'> {markdownToReact(props.subtitle)} </div>
+            <div className='text-2xl md:text-3xl font-light tracking-tight opacity-90'> {markdownToReact(props.subtitle)} </div>
           </div>
         </div>
       </header>

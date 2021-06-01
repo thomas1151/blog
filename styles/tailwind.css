@@ -24,8 +24,9 @@ h1,h2{
 header p{
     @apply pb-4
 }
+
 header a{
-  @apply inline-block p-4 mt-4 mr-2 bg-white dark:bg-gray-900 shadow-md border-gray-300 font-display text-blue-900 dark:text-gray-50 border-l-8 border-gray-300 dark:border-gray-800 transition-all duration-200;
+    @apply inline-block p-4 mt-4 mr-2 bg-white dark:bg-primary shadow-md border-blue-300 font-display text-blue-900 dark:text-gray-50 border-l-8 border-gray-300 dark:border-gray-800 transition-all duration-200;
 }
 
 header a:hover{
