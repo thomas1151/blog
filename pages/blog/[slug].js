@@ -21,7 +21,7 @@ export default function Post({ post, morePosts, preview }) {
                     </title>
                     <meta property="og:image" content={post.ogImage.url} />
                 </Head>
-                <PostBody content={markdownToReact(post.content || '')} contentMeta={`Published: ${new Date(post.date).toLocaleDateString()}`} />
+                <PostBody content={markdownToReact(post.content || '')} contentMeta={<>Published: <strong>{new Date(post.date).toLocaleDateString()}</strong></>} />
             </div>
         </BasicPage>
 

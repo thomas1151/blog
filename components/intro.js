@@ -7,7 +7,6 @@ export default function Intro({ title, content, alwaysShowTitle }) {
       title={title} 
       subtitle={content} 
       showTriangle={true} 
-      smallHeader={true}
       alwaysShowTitle={alwaysShowTitle}
     />
     // <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">

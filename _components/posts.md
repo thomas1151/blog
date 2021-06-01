@@ -1,5 +1,5 @@
 ---
-title: "Here's some things I've written"
+title: "Here's some things I've written."
 # image: '/assets/components/hello/face.png'
 subtitle: "Sometimes I publish my ramblings here so I can inflict them on others."
 bgColor: "mustard-yellow"
