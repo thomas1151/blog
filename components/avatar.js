@@ -1,4 +1,3 @@
-import Image from 'next/image'
 
 export default function Avatar({ name, picture, alt='Avatar' }) {
   return (

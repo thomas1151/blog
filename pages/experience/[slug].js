@@ -9,7 +9,7 @@ import { getPostBySlug, getAllPosts, getExperienceBySlug, getAllExperience, API 
 import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
-import markdownToHtml from '../../lib/markdownToHtml'
+import markdownToReact from '../../lib/markdownToReact'
 import BasicPage from '../../layouts/basic-page'
 import GenericCard from '../../components/generic-card'
 import { generateAssetUrl } from '../../lib/utils'
@@ -31,7 +31,7 @@ export default function Experience({ post, morePosts, preview }) {
                 </title>
                 <meta property="og:image" content={post.slug} />
             </Head>
-            <PostBody content={post.content} />
+            <PostBody content={markdownToReact(post.content || '')} />
         </BasicPage>
     
     )
@@ -51,13 +51,12 @@ export async function getStaticProps({ params }) {
         'color',
         'componentType'
     ])
-    const content = await markdownToHtml(post.content || '')
+    //const content = await markdownToReact(post.content || '')
 
     return {
         props: {
             post: {
                 ...post,
-                content,
             },
         },
     }

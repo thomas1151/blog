@@ -17,10 +17,12 @@ export default function PostBody({ content, contentMeta }) {
       }
       <div className="max-w-screen-lg shadow-md border-gray-300 p-4 sm:p-8 bg-white dark:bg-gray-900">
         <div
-          className={markdownStyles['markdown']}
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+          className={`${markdownStyles['markdown']} markdown`}
+        >
+         { content }
+        </div>
       </div>
+
     </>
   )
 }

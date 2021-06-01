@@ -1,11 +1,13 @@
 import cn from 'classnames'
 import Link from 'next/link'
 import Image from 'next/image'
+import { generateAwsImage } from '../lib/utils'
 
 export default function CoverImage({ title, src, slug, isSquare, urlPacket, customSizing }) {
   console.log(src)
   const image = (
     <Image
+      loader={generateAwsImage}
       src={src}
       layout='fill'
       objectFit={ isSquare ? 'contain' : 'cover'}

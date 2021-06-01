@@ -4,6 +4,7 @@ import Image from 'next/image'
 import useResize from '../hooks/useResize'
 import { useRef } from 'react'
 import SectionTitle from './sectionTitle'
+import { generateAwsImage } from '../lib/utils'
 
 export default function GenericCard({ title, content, image, className, showTitle=true, imageAlt="", moreUrl }) {
     const componentRef = useRef()
@@ -15,14 +16,16 @@ export default function GenericCard({ title, content, image, className, showTitl
                 { content &&
                     <div
                         className={`${markdownStyles['markdown']} px-4 py-2  ${image ? 'w-full md:w-3/4' : ' w-full'}`}
-                        dangerouslySetInnerHTML={{ __html: content }}
-                    />
+                    >
+                        {content}
+                    </div> 
                 }
                 { image && 
                     <div ref={componentRef} className={cn("align-middle	w-full border-t relative md:border-l md:border-t-0 border-gray-200 dark:border-gray-700 flex mx-auto py-4 height-xxs",
                                 {" md:w-1/4": content})}>
                         <div className="relative w-full ">            
                                 <Image
+                                loader={generateAwsImage}
                                 layout='fill' 
                                 objectFit='contain'
                                 src={image}

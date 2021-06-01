@@ -12,7 +12,9 @@ export default function HeroPost({
   author,
   slug,
   componentType
-}) {
+}) {  
+  const url = generateUrl(componentType, slug)
+
   return (
     <section className=" shadow-md my-4 bg-white dark:text-white dark:bg-gray-900">
       <div className="relative w-full overflow-hidden">
@@ -24,7 +26,7 @@ export default function HeroPost({
       <div className=" md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 px-4">
         <div className="border-r border-gray-100 dark:border-gray-600">
           <h3 className="mb-4 text-3xl lg:text-3xl leading-tight pt-4">
-            <Link as={`/posts/${slug}`} href="/posts/[slug]">
+            <Link as={url.as} href={url.href}>
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>

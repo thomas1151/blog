@@ -3,6 +3,7 @@ import cn from 'classnames'
 import NavBar from './navbar'
 import { useState } from 'react';
 import { useInView } from 'react-intersection-observer'
+import markdownToReact from '../lib/markdownToReact';
 
 export default function Header(props) {
 
@@ -44,7 +45,7 @@ export default function Header(props) {
           <div className='text-left sm:px-4'>
             <h2 className={cn('text-6xl md:text-7xl font-display tracking-tighter leading-none', {'mb-4': !props.date})}>{props.title}</h2>
             {props.date && <div className='text-2xl font-display md:text-3xl tracking-tight opacity-90 pb-4 mb-4'>{ new Date(props.date).toLocaleDateString()}</div>}
-            <div className='text-2xl md:text-3xl  font-light tracking-tight opacity-90' dangerouslySetInnerHTML={{ __html: props.subtitle }} />
+            <div className='text-2xl md:text-3xl  font-light tracking-tight opacity-90'> {markdownToReact(props.subtitle)} </div>
           </div>
         </div>
       </header>

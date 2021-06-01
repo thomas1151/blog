@@ -4,7 +4,7 @@ import PostBody from '../../components/post-body'
 import { API } from '../../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
-import markdownToHtml from '../../lib/markdownToHtml'
+import markdownToReact from '../../lib/markdownToReact'
 import BasicPage from '../../layouts/basic-page'
 
 export default function Post({ post, morePosts, preview }) {
@@ -21,7 +21,7 @@ export default function Post({ post, morePosts, preview }) {
                     </title>
                     <meta property="og:image" content={post.ogImage.url} />
                 </Head>
-                <PostBody content={post.content} contentMeta={`Published: ${new Date(post.date).toLocaleDateString()}`} />
+                <PostBody content={markdownToReact(post.content || '')} contentMeta={`Published: ${new Date(post.date).toLocaleDateString()}`} />
             </div>
         </BasicPage>
 
@@ -41,13 +41,13 @@ export async function getStaticProps({ params }) {
         'coverImage',
         'color'
     ])
-    const content = await markdownToHtml(post.content || '')
+    // const content = await markdownToReact(post.content || '')
 
     return {
         props: {
             post: {
                 ...post,
-                content,
+                //content,
             },
         },
     }
