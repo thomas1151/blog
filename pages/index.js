@@ -19,7 +19,7 @@ export default function Index({posts, components, experience}) {
           <title>Thomas Barratt</title>
         </Head>
           <Intro {...components.hero} />
-        <Container className="px-4 relative">
+        <Container className="px-4 relative" showToggles>
           <div className="z-10 relative pt-4">
           {heroPost && (
             <HeroPost

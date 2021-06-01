@@ -14,7 +14,7 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  darkMode: 'media',
+  darkMode: 'class',
   purge: [],
   theme: {
     extend: {

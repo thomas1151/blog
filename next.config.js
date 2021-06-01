@@ -26,5 +26,5 @@ module.exports = {
         // Important: return the modified config
         return config
     },
-    exportTrailingSlash: true
+    trailingSlash: true
 }
