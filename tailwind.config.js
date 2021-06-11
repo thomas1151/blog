@@ -15,7 +15,7 @@ module.exports = {
     // purgeLayersByDefault: true,
   },
   darkMode: 'class',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: ['./{pages,components}/**/*.{js,ts,jsx,tsx,css}', './_{blog,component,experiences}/**/*.{md}'],
   theme: {
     extend: {
       colors: customColors,
