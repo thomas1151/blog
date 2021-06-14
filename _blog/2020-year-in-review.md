@@ -12,7 +12,8 @@ author:
   name: Thomas Barratt
 ogImage:
   url: 'cover.jpg'
-color: "purple-900"
+bgColor: "bg-purple-900"
+borderColor: "border-purple-900"
 ---
 
 > Published on 29/12/2020.  

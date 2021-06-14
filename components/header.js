@@ -15,7 +15,7 @@ export default function Header(props) {
   if(props.coverImageUrl && !props.disableHeaderImage){
     headerStyles.backgroundImage =  `url(${props.coverImageUrl})`
   }
-  
+  console.log(props);
   return (
     // <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
     //   <Link href="/">
@@ -34,8 +34,9 @@ export default function Header(props) {
           className={
             cn(`absolute h-full w-full `,
               {
-                [`bg-${props.bgColor} border-${props.bgColor}`]: (props.bgColor && (props.disableHeaderImage || !props.coverImageUrl)),
-                'bg-primary border-primary dark:bg-dark-primary dark:border-dark-primary': !props.bgColor && !props.coverImageUrl,
+                [`${props.bgColor}`]: (props.bgColor !== undefined && (props.disableHeaderImage === true || props.coverImageUrl === undefined)),
+                [`${props.borderColor}`]: (props.borderColor === true),
+                'bg-primary border-primary dark:bg-dark-primary dark:border-dark-primary': props.bgColor === undefined && props.coverImageUrl === undefined,
                 'bg-transparentish': props.coverImageUrl && !props.disableHeaderImage,
                 'avec-triangle': props.showTriangle
               }
@@ -50,8 +51,8 @@ export default function Header(props) {
         </div>
       </header>
       <div className={cn("mx-auto w-full px-4 mb-6 pt-4 lg:px-0 shadow-sm",{
-        "bg-secondary dark:bg-primary" : !props.accentColor,
-        [`bg-${props.accentColor}`]: props.accentColor
+        "bg-secondary dark:bg-primary" : !props.bgAccentColor,
+        [`${props.bgAccentColor}`]: props.bgAccentColor
       })}>
         <div className=" m-auto container">
           <div className="text-left mx-auto">

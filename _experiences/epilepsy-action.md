@@ -4,7 +4,9 @@ title: 'Team 17 for Epilepsy Action'
 subtitle: 'A cutting edge, responsive and CMS based tool for Evidence Gap Mapping.'
 summary: "Development of a a cutting edge, responsive and CMS based tool for Evidence Gap Mapping, for use in pieces of major research by Epilepsy Action and the University of Sheffield's School of Health and Related Research. "
 url: 'thomasbarratt.co.uk'
-color: red-500
+bgColor: 'bg-red-500'
+borderColor: 'border-red-500'
+bgAccentColor: 'bg-red-300'
 coverImage: 'egm-01.png'
 isSquare: true
 

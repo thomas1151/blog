@@ -9,7 +9,8 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: 'cover.jpg'
-color: "purple-900"
+bgColor: "bg-purple-900"
+borderColor: "border-purple-900"
 ---
 
 > A good year is difficult to define, but a bad one isn't. An alright year? Well, now we're talking.

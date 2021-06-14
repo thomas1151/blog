@@ -18,7 +18,7 @@ export default function PostIndex({ posts, content, preview }) {
                 ) : (
                         <div className="pb-8">
                             <GenericCard showTitle={false} {...content} className={"py-4 my-4"}></GenericCard>
-                            {posts.length > 0 && <MoreStories maxCols='3' posts={posts} />}
+                            {posts.length > 0 && <MoreStories  maxCols={3} posts={posts} />}
                         </div>
                     )}
             </Container>
@@ -32,7 +32,7 @@ export async function getStaticProps({ params }) {
     return {
         props: {
             posts: API.ALL.BLOG(['title', 'content', 'summary', 'image', 'coverImage', 'slug', 'isSquare', 'date']),
-            content: API.GET.COMPONENT('posts', ['title', 'subtitle', 'content', 'image', 'bgColor', 'accentColor'])
+            content: API.GET.COMPONENT('posts', ['title', 'subtitle', 'content', 'image', 'bgColor', 'borderColor', 'bgAccentColor'])
         }
     }
 }

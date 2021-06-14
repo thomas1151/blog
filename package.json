@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next build && next export",
-    "start": "next start -p 3000"
+    "start": "NODE_ENV=production next start -p 3000"
   },
   "dependencies": {
     "classnames": "2.2.6",

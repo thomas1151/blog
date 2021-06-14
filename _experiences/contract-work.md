@@ -4,10 +4,7 @@ title: 'Contract Work'
 subtitle: 'My work for great companies across the country: fixing, creating, and improving.'
 summary: "I have worked alongside companies in the telecoms and insurance industries to, managing 5+ clients' online presence and/or internal systems. By planning ahead effectively and communicating clearly, I modernize existing systems and can solve user problems, helping them to provide a platform which they can run their business or idea from."
 url: 'thomasbarratt.co.uk'
-coverImage: 'cover.png'
-color: blue-500
 isSquare: true
-
 ---
 
 > 2017 - Present.

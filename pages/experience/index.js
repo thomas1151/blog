@@ -21,7 +21,7 @@ export default function ExperienceIndex({ experience, content, preview }) {
                 ) : (
                         <div className="pb-8"> 
                             <GenericCard showTitle={false} {...content} className={"py-4 my-4"}></GenericCard>
-                            {experience.length > 0 && <MoreStories maxCols='3' posts={experience} />}
+                            {experience.length > 0 && <MoreStories maxCols={3} posts={experience} />}
                         </div>
                     )}
             </Container>
@@ -33,7 +33,7 @@ export async function getStaticProps({ params }) {
     return {
         props:{ 
             experience: API.ALL.EXPERIENCE(['title', 'content', 'summary', 'image', 'coverImage', 'slug', 'isSquare']),
-            content: API.GET.COMPONENT('experience', ['title', 'subtitle', 'content', 'image', 'bgColor', 'accentColor'])
+            content: API.GET.COMPONENT('experience', ['title', 'subtitle', 'content', 'image', 'bgColor', 'borderColor', 'bgAccentColor'])
         }
     }
 }

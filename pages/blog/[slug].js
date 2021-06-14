@@ -39,7 +39,9 @@ export async function getStaticProps({ params }) {
         'content',
         'ogImage',
         'coverImage',
-        'color'
+        'bgColor',
+        'borderColor',
+        'bgAccentColor',
     ])
     // const content = await markdownToReact(post.content || '')
 
