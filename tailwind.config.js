@@ -15,7 +15,10 @@ module.exports = {
     // purgeLayersByDefault: true,
   },
   darkMode: 'class',
-  purge: ['./{pages,components}/**/*.{js,ts,jsx,tsx,css}', './_{blog,component,experiences}/**/*.{md}'],
+  purge: {
+    content: ['./{pages,components,layouts}/**/*.{js,ts,jsx,tsx,css}', './_content/**/*.md'],
+    enabled: true
+  },
   theme: {
     extend: {
       colors: customColors,
@@ -41,22 +44,16 @@ module.exports = {
       },
       fontSize: {
         '7xl': '5rem',
-      }
+      },
+      backgroundColor: customColors,
+      borderColor: customColors,
     },
     fontFamily: {
       'display': ['Poppins', "sans-serif"],
       'body': ["Roboto Slab", "serif"],
       'sans-serif': ['Poppins', "sans-serif"],
       'serif': ["Roboto Slab", "serif"]
-    },
-    backgroundColor: theme => ({
-      ...theme('colors'),
-      ...customColors,
-    }),
-    borderColor: theme => ({
-      ...theme('colors'),
-      ...customColors,
-    }),
+    }
   },
   variants: {},
   plugins: [],

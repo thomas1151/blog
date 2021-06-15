@@ -6,7 +6,7 @@ import { useRef } from 'react'
 import SectionTitle from './sectionTitle'
 import { generateAwsImage } from '../lib/utils'
 
-export default function GenericCard({ title, content, image, className, showTitle=true, imageAlt="", moreUrl }) {
+export default function GenericCard({ title, content, image, className, showTitle=true, imageAlt="", moreUrl, children }) {
     const componentRef = useRef()
     const { width, height } = useResize(componentRef)
     return(
@@ -20,6 +20,7 @@ export default function GenericCard({ title, content, image, className, showTitl
                         {content}
                     </div> 
                 }
+                { children }
                 { image && 
                     <div ref={componentRef} className={cn("align-middle	w-full border-t relative md:border-l md:border-t-0 border-gray-200 dark:border-gray-700 flex mx-auto py-4 height-xxs",
                                 {" md:w-1/4": content})}>

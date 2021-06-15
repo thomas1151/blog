@@ -7,7 +7,6 @@ url: 'thomasbarratt.co.uk'
 bgColor: 'bg-red-500'
 borderColor: 'border-red-500'
 bgAccentColor: 'bg-red-300'
-coverImage: 'egm-01.png'
 isSquare: true
 
 

@@ -12,7 +12,7 @@ const FOOTER_LINKS = [
 ]
 export default function Footer() {
   return (
-    <footer className=" bg-primary dark:bg-gray-900 text-white pb-4">
+    <footer className=" bg-gray-800 dark:bg-gray-900 text-white pb-4">
       <div className="mx-auto bg-blue-800 w-full  px-4 mb-6 pt-4 lg:px-0 shadow-sm"/>
       <Container>
         <div className="flex flex-col lg:flex-row items-left sm:items-center ">

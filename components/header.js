@@ -15,7 +15,7 @@ export default function Header(props) {
   if(props.coverImageUrl && !props.disableHeaderImage){
     headerStyles.backgroundImage =  `url(${props.coverImageUrl})`
   }
-  console.log(props);
+  const isHeaderImage =  !(props.disableHeaderImage === true || props.coverImageUrl === undefined);
   return (
     // <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
     //   <Link href="/">
@@ -25,17 +25,18 @@ export default function Header(props) {
     // </h2>
 
     <>
-      <NavBar atTop={inView} alwaysShowTitle={props.alwaysShowTitle} />
+      <NavBar atTop={inView} alwaysShowTitle={props.alwaysShowTitle} bgColor={props.bgColor} isHeaderImage={isHeaderImage}  />
       <header className={`w-full font-serif font-light relative bg-cover bg-center`}
-        style={headerStyles}
+        style={headerStyles}  
       >
+        { console.log(props)}
         <div style={{ backdropFilter: "blur(1em)" }}
 
           className={
             cn(`absolute h-full w-full `,
               {
-                [`${props.bgColor}`]: (props.bgColor !== undefined && (props.disableHeaderImage === true || props.coverImageUrl === undefined)),
                 [`${props.borderColor}`]: (props.borderColor === true),
+                [`${props.bgColor}`]: (props.bgColor !== undefined && !isHeaderImage),
                 'bg-primary border-primary dark:bg-dark-primary dark:border-dark-primary': props.bgColor === undefined && props.coverImageUrl === undefined,
                 'bg-transparentish': props.coverImageUrl && !props.disableHeaderImage,
                 'avec-triangle': props.showTriangle

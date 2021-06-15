@@ -4,10 +4,9 @@ title: 'Amazon Web Services'
 subtitle: 'A placement year working on mission critical software for one of the biggest tech companies in the world'
 summary: "Working on placement as a L4 Software Development Engineer for the platform team at AWS' Relational Database Services Division. "
 url: 'https://aws.amazon.com/rds/'
-bgColor: 'bg-amazon-orange'
-borderColor: 'bg-amazon-orange'
-bgAccentColor: 'bg-red-300'
-coverImage: 'cover.png'
+bgColor: "bg-amazon-orange"
+borderColor: "bg-amazon-orange"
+bgAccentColor: "bg-red-300"
 
 ---
 

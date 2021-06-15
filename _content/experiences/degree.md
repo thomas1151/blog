@@ -4,6 +4,9 @@ title: 'Masters in Computer Science and Artificial Intelligence (with a Year in 
 subtitle: 'My Computer Science and Artificial Intelligence Degree with Integrated Masters.'
 summary: "Fully trained as a MComp computer scientist at the University of Sheffield, one of the country's top 25 universities for Computer Science, and one of the top 100 universities in the world."
 url: 'thomasbarratt.co.uk'
+bgColor: 'bg-sheffield-purple'
+borderColor: 'bg-sheffield-purple'
+bgAccentColor: 'bg-primary'
 
 # isSquare: true
 

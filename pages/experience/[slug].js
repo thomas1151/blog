@@ -19,9 +19,6 @@ export default function Experience({ post, morePosts, preview }) {
     if (!router.isFallback && !post?.slug) {
         return <ErrorPage statusCode={404} />
     }
-
-    post.bgColor = post.color
-
     const sidebar = <GenericCard image={generateAssetUrl(post.componentType, post.slug, post.coverImage)}/>
     return (
         <BasicPage post={post} router={router} sidebar={sidebar} disableHeaderImage={true} alwaysShowTitle={true} >
