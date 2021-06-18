@@ -1,5 +1,6 @@
 const customColors = {
-  'primary': '#03A9F4',
+  'primary': '#037CC2',
+  'tb': '#03A9F4',
   'secondary': '#ecbe45',
   'danger': '#e3342f',
   'amazon-orange': '#FF9900',

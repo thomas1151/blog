@@ -20,9 +20,9 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
             ' shadow-md ' : !atTop,
             'dark:bg-dark-primary bg-primary ': !atTop && isHeaderImage
         })}>
-                <div className="relative z-10 pt-3 sm:pt-6 max-w-screen-xl lg:w-full mx-auto ">
+                <div className="relative z-10 pt-3 sm:pt-4 max-w-screen-xl lg:w-full mx-auto ">
                     <div>
-                        <div className="relative pb-3 sm:pb-6 px-4">
+                        <div className="relative pb-3 sm:pb-4 px-4">
                             <nav className="relative flex items-center justify-between sm:h-10" aria-label="Global">
                                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                                     <div className="flex items-center justify-between w-full md:w-auto">

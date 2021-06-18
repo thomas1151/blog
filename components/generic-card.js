@@ -12,7 +12,7 @@ export default function GenericCard({ title, content, image, className, showTitl
     return(
         <div className={cn("w-full z-10 ", {[className]: className})}>
             {showTitle && title && <SectionTitle title={title} moreUrl={moreUrl} />}
-            <div className='w-full flex flex-wrap shadow-md bg-gray-50 dark:bg-gray-900 dark:text-gray-50' >
+            <div className='w-full flex flex-wrap shadow-md bg-white dark:bg-gray-900 dark:text-gray-50' >
                 { content &&
                     <div
                         className={`${markdownStyles['markdown']} px-4 py-2  ${image ? 'w-full md:w-3/4' : ' w-full'}`}
@@ -22,8 +22,11 @@ export default function GenericCard({ title, content, image, className, showTitl
                 }
                 { children }
                 { image && 
-                    <div ref={componentRef} className={cn("align-middle	w-full border-t relative md:border-l md:border-t-0 border-gray-200 dark:border-gray-700 flex mx-auto py-4 height-xxs",
-                                {" md:w-1/4": content})}>
+                    <div ref={componentRef} className={cn("align-middle	w-full border-t relative md:border-t-0 border-gray-200 dark:border-gray-700 flex mx-auto py-4 height-xxs",
+                                {
+                                    "md:w-1/4": content,
+                                    "md:border-l": children || content,
+                                })}>
                         <div className="relative w-full ">            
                                 <Image
                                 loader={generateAwsImage}
