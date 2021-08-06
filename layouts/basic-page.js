@@ -9,7 +9,7 @@ export default function BasicPage({post, children, sidebar, preview, disableHead
     const coverImg = post.coverImage && generateAssetUrl(post.componentType, post.slug, post.coverImage);
     return (
         <Layout preview={preview}>
-            <Header {...post} smallHeader={smallHeader} coverImageUrl={coverImg} disableHeaderImage={disableHeaderImage} alwaysShowTitle={true} />
+            <Header {...post} smallHeader={smallHeader} coverImageUrl={coverImg} disableHeaderImage={disableHeaderImage} alwaysShowTitle />
             <Container showToggles={true}>
                 {router && router.isFallback ? (
                     <PostTitle>Loading…</PostTitle>
