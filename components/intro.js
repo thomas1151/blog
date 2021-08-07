@@ -32,7 +32,7 @@ export default function Intro({ title, content, alwaysShowTitle }) {
       bigText
     >
       <div className="h-40 w-full absolute z-10 bottom-0 pb-2" ref={stageCanvasRef}>
-        <LineChart width={width} />
+        <LineChart width={width} className={"bg-primary dark:bg-dark-primary"} />
       </div>
       </Header>
   )

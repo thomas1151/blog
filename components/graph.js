@@ -18,16 +18,25 @@ const getElement = (date) => {
         y: Math.random()
     })
 }
+
+const getMultiElements = (quantity) => {
+    let els =  []
+    for(let i = 0; i < (quantity ?? 1); i++){
+        els.unshift(getElement(new Date(Date.now() - i*1000)));
+    }
+    return els;
+}
 const LineChart = ({
     width,
-    height
+    height,
+    className
 }) => {
 
     return ( 
       <Line 
         height = { height }
         width = { width }
-        className = "bg-primary"
+        className = { className }
         plugins = { [] }
         data = {
             {
@@ -38,12 +47,12 @@ const LineChart = ({
                     borderDash: [8, 4],
                     fill: false,
                     cubicInterpolationMode: 'monotone',
-                    data: [].fill(0, 5, () => getElement())
+                    data: getMultiElements(15) // [].fill(0, 5, getElement())
                 }, {
                     label: 'Dataset 2',
                     borderColor: 'rgba(255, 165, 0, 0.8)',
                     fill: false,
-                    data: [].fill(0, 5, () => getElement())
+                    data: getMultiElements(15)// [].fill(0, 5, getElement())
                 }]
             }
         }
@@ -66,7 +75,9 @@ const LineChart = ({
                         display: false,
                         type: 'realtime',
                         realtime: {
-                            delay: 2000,
+                            //duration: 5000,
+                            //refresh: 10000,
+                            delay: 1000,
                             onRefresh: chart => {
                                 chart.data.datasets.forEach(dataset => {
                                     dataset.data.push(getElement());
