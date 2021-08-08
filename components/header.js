@@ -43,7 +43,7 @@ export default function Header(props) {
               }
             )
           }></div>
-        <div ref={ref} className={`md:flex rounded-lg ${props.smallHeader ? 'pb-20 pt-36' : 'pb-40 md:pb-44 pt-40 md:pt-52'} justify-left text-white dark:text-gray-50 relative max-w-screen-xl mx-auto px-4 xl:px-0 z-40`}>
+        <div ref={ref} className={`md:flex rounded-lg ${props.smallHeader ? 'pb-20 pt-36' : 'pb-40 md:pb-44 pt-32 md:pt-52'} justify-left text-white dark:text-gray-50 relative max-w-screen-xl mx-auto px-4 xl:px-0 z-40`}>
           <div className='text-left sm:px-4'>
             <h2 className={cn('lg:text-7xl font-display tracking-tighter leading-none', {'mb-4': !props.date, 'text-5xl': !props.bigText, 'text-6xl': props.bigText})}>{props.title}</h2>
             {props.date && <div className='text-2xl font-display md:text-3xl tracking-tight opacity-90 pb-4 mb-4'>{ new Date(props.date).toLocaleDateString()}</div>}

@@ -2,7 +2,6 @@ import cn from 'classnames'
 import Link from 'next/link';
 import { useState } from 'react'
 
-
 const MENUITEMS = [
     { title: 'Blog', href:"/blog" },
     { title: 'Experiences', href:"/experience" },
@@ -17,7 +16,7 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
         {
             [`${bgColor}`]: customColoredNav,
             'dark:bg-dark-primary bg-primary': bgColor === undefined && !isHeaderImage,
-            ' shadow-md ' : !atTop,
+            // ' shadow-md ' : !atTop,
             'dark:bg-dark-primary bg-primary ': !atTop && isHeaderImage
         })}>
                 <div className="relative z-10 pt-3 sm:pt-4 max-w-screen-xl lg:w-full mx-auto ">
@@ -27,10 +26,10 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
                                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                                     <div className="flex items-center justify-between w-full md:w-auto">
                                         <Link href="/">
-                                            <a>
+                                            <a className="flex">
                                                 <span className="sr-only">Thomas Barratt</span>
-                                                <img className="h-8 w-auto sm:h-10 inline-block" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"/>
-                                                { (!(atTop) || alwaysShowTitle)  && <span className="text-2xl px-4 font-display tracking-tighter leading-tight text-white align-middle">Thomas Barratt</span>}
+                                                <div className="h-8 sm:h-10 inline-block w-16 logo"/>
+                                                { (!(atTop) || alwaysShowTitle)  && <span className="text-2xl px-4 font-display tracking-tighter leading-tight text-white align-middle self-center">Thomas Barratt</span>}
                                             </a>
                                         </Link>
                                         <div className="-mr-2 flex items-center md:hidden">
