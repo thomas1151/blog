@@ -7,7 +7,6 @@ import { API } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import GenericCard from '../components/generic-card'
-import { ThemeProvider } from '../components/themeContext'
 export default function Index({posts, components, experience}) {
 
   const heroPost = posts[0]
@@ -15,7 +14,6 @@ export default function Index({posts, components, experience}) {
   return (
     <>
       <Layout>
-        <ThemeProvider>
           <Head>
             <title>Thomas Barratt</title>
           </Head>
@@ -43,8 +41,6 @@ export default function Index({posts, components, experience}) {
             </div>
 
           </Container>
-        </ThemeProvider>
-
       </Layout>
     </>
   )
