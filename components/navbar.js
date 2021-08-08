@@ -28,7 +28,7 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
                                         <Link href="/">
                                             <a className="flex">
                                                 <span className="sr-only">Thomas Barratt</span>
-                                                <div className="h-8 sm:h-10 inline-block w-16 logo"/>
+                                                <div className="h-8 sm:h-10 inline-block w-12 logo"/>
                                                 { (!(atTop) || alwaysShowTitle)  && <span className="text-2xl px-4 font-display tracking-tighter leading-tight text-white align-middle self-center">Thomas Barratt</span>}
                                             </a>
                                         </Link>
