@@ -7,7 +7,7 @@ import { API } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import GenericCard from '../components/generic-card'
-
+import { ThemeProvider } from '../components/themeContext'
 export default function Index({posts, components, experience}) {
 
   const heroPost = posts[0]
@@ -15,33 +15,36 @@ export default function Index({posts, components, experience}) {
   return (
     <>
       <Layout>
-        <Head>
-          <title>Thomas Barratt</title>
-        </Head>
-          <Intro {...components.hero} />
-        <Container className="px-4 relative" showToggles>
-          <div className="z-10 relative pt-4">
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              summary={heroPost.summary}
-              componentType={heroPost.componentType}
-            />
-            )}
-          </div>
+        <ThemeProvider>
+          <Head>
+            <title>Thomas Barratt</title>
+          </Head>
+              <Intro {...components.hero} />
+          <Container className="px-4 relative" showToggles>
+            <div className="z-10 relative pt-4">
+            {heroPost && (
+              <HeroPost
+                title={heroPost.title}
+                coverImage={heroPost.coverImage}
+                date={heroPost.date}
+                author={heroPost.author}
+                slug={heroPost.slug}
+                summary={heroPost.summary}
+                componentType={heroPost.componentType}
+              />
+              )}
+            </div>
 
-          <GenericCard {...components.experience} className="py-4 my-4" moreUrl='/experience'></GenericCard>
-          {experience.length > 0 && <MoreStories maxCols={3} posts={experience} />}
+            <GenericCard {...components.experience} className="py-4 my-4" moreUrl='/experience'></GenericCard>
+            {experience.length > 0 && <MoreStories maxCols={3} posts={experience} />}
 
-          <div className="pb-8">
-            {morePosts.length > 0 && <MoreStories posts={morePosts} title="Other Ramblings" moreUrl='/blog' />}
-          </div>
+            <div className="pb-8">
+              {morePosts.length > 0 && <MoreStories posts={morePosts} title="Other Ramblings" moreUrl='/blog' />}
+            </div>
 
-        </Container>
+          </Container>
+        </ThemeProvider>
+
       </Layout>
     </>
   )

@@ -29,7 +29,8 @@ const getMultiElements = (quantity) => {
 const LineChart = ({
     width,
     height,
-    className
+    className,
+    colorsArray = []
 }) => {
 
     return ( 
@@ -43,16 +44,16 @@ const LineChart = ({
 
                 datasets: [{
                     label: 'Dataset 1',
-                    borderColor: 'rgba(33,21,81, 0.5)',
+                    borderColor: colorsArray[0] ?? 'rgba(33,21,81, 0.5)',
                     borderDash: [8, 4],
                     fill: false,
                     cubicInterpolationMode: 'monotone',
-                    data: getMultiElements(15) // [].fill(0, 5, getElement())
+                    data: getMultiElements(15)
                 }, {
                     label: 'Dataset 2',
-                    borderColor: 'rgba(255, 165, 0, 0.8)',
+                    borderColor: colorsArray[1] ?? 'rgba(255, 165, 0, 0.8)',
                     fill: false,
-                    data: getMultiElements(15)// [].fill(0, 5, getElement())
+                    data: getMultiElements(15)
                 }]
             }
         }

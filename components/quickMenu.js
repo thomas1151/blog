@@ -3,11 +3,9 @@ import { Toggle } from './themeToggle';
 export const QuickMenu = ({ darkMode }) => {
     return (
         <div class="fixed bottom-0 right-0 bg-gray-300 shadow-lg dark:bg-gray-700 rounded-md z-50 mx-4 my-4">
-            <ThemeProvider>
                 <div>
                     <Toggle />
                 </div>
-            </ThemeProvider>
         </div>
     )
 }
