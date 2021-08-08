@@ -91,3 +91,9 @@ header li{
 .markdown blockquote p{
     @apply font-display text-blue-600  dark:text-blue-200;
 }
+
+.logo{
+  background-color: white;
+  -webkit-mask: url(/logo.svg) no-repeat center;
+  mask: url(/logo.svg) no-repeat center;
+}
