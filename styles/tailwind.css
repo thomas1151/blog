@@ -92,6 +92,50 @@ header li{
     @apply font-display text-blue-600  dark:text-blue-200;
 }
 
+
+.points {
+    width:200px;
+    height:200px;
+    overflow:hidden;
+}
+.points:before {
+    content:"";
+    display:block;
+    width:70%;
+    height:70%;
+    background-image: url(/hideout.svg);
+    transform: rotate(-45deg);
+    transform-origin: top right;
+    -ms-transform: rotate(-45deg);
+    -ms-transform-origin: top right;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 0 0;
+        background-size: 2em 2em;
+
+}
+
+
+/* 
+.points {
+  background-image: url(/hideout.svg);
+
+    background-size: 2em 2em;
+    transform: rotate(
+0deg
+);
+    position: absolute;
+    right: 0;
+}
+
+.points-wrap{
+  width: 0; 
+  height: 0; 
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  
+  border-left: 60px solid;
+} */
+
 .logo{
   background-color: white;
   -webkit-mask: url(/logo.svg) no-repeat center;

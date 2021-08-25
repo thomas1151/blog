@@ -26,6 +26,9 @@ export default function BasicPage({post, children, sidebar, preview, disableHead
                             }
                         </div>
                     )}
+            <div className="points-wrap">
+                <div className="points"></div>
+            </div>
             </Container>
 
         </Layout>
