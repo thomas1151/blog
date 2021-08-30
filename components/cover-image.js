@@ -12,7 +12,7 @@ export default function CoverImage({ title, src, slug, isSquare, urlPacket, cust
 
   const image = (
     <img
-      src={generateAwsImage({src, width, quality: 100})}
+      src={generateAwsImage({src, width, quality: 125})}
       className ={cn('shadow-small', {
         'hover:shadow-medium transition-shadow duration-200': slug,
         'mx-auto relative self-center max-w-xxs': isSquare,

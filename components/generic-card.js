@@ -34,7 +34,7 @@ export default function GenericCard({ title, content, image, className, showTitl
                         <div className="relative w-full" ref={imgComponentRef}>
                                <img
                                 src={generateAwsImage({src: image || '', width: dimensions.width, quality: 100})}
-                                className="mx-auto  max-h-24 self-center "
+                                className="mx-auto  max-h-72 self-center "
 
                                 alt={imageAlt}
 
