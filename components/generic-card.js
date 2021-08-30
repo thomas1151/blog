@@ -2,6 +2,7 @@ import markdownStyles from './markdown-styles.module.css'
 import cn from 'classnames'
 import Image from 'next/image'
 import useResize from '../hooks/useResize'
+import { useContainerDimensions} from '../hooks/useContainerDimensions'
 import { useRef } from 'react'
 import SectionTitle from './sectionTitle'
 import { generateAwsImage } from '../lib/utils'
@@ -9,6 +10,9 @@ import { generateAwsImage } from '../lib/utils'
 export default function GenericCard({ title, content, image, className, showTitle=true, imageAlt="", moreUrl, children }) {
     const componentRef = useRef()
     const { width, height } = useResize(componentRef)
+    const imgComponentRef = useRef()
+    const dimensions = useContainerDimensions(imgComponentRef)
+
     return(
         <div className={cn("w-full z-10 ", {[className]: className})}>
             {showTitle && title && <SectionTitle title={title} moreUrl={moreUrl} />}
@@ -27,15 +31,15 @@ export default function GenericCard({ title, content, image, className, showTitl
                                     "md:w-1/4": content,
                                     "md:border-l": children || content,
                                 })}>
-                        <div className="relative w-full">            
-                                <Image
-                                loader={generateAwsImage}
-                                layout='fill' 
-                                objectFit='contain'
-                                src={image}
+                        <div className="relative w-full" ref={imgComponentRef}>
+                               <img
+                                src={generateAwsImage({src: image || '', width: dimensions.width, quality: 100})}
+                                className="mx-auto  max-h-24 self-center "
+
                                 alt={imageAlt}
-                                className="mx-auto  py-8 self-center px-2"
-                                />
+
+                                />            
+
                         </div>
                         <div className="my-24" />
                     </div>

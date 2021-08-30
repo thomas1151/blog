@@ -5,6 +5,8 @@ subtitle: 'My work for great companies across the country: fixing, creating, and
 summary: "I have worked alongside companies in the telecoms and insurance industries to, managing 5+ clients' online presence and/or internal systems. By planning ahead effectively and communicating clearly, I modernize existing systems and can solve user problems, helping them to provide a platform which they can run their business or idea from."
 url: 'thomasbarratt.co.uk'
 isSquare: true
+coverImage: 'cover.png'
+
 ---
 
 > 2017 - Present.

@@ -1,6 +1,6 @@
 ---
 title: "Here's Some Things I've Done."
-image: '/assets/components/hello/face.png'
+image: '/assets/component/hello/face.png'
 subtitle: "I've done some things, and I'd like to show them off."
 bgColor: "bg-green-500"
 borderColor: "border-green-500"

@@ -7,6 +7,7 @@ url: 'https://aws.amazon.com/rds/'
 bgColor: "bg-amazon-orange"
 borderColor: "bg-amazon-orange"
 bgAccentColor: "bg-red-300"
+coverImage: 'cover.png'
 
 ---
 

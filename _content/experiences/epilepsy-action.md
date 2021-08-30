@@ -8,6 +8,7 @@ bgColor: 'bg-red-500'
 borderColor: 'border-red-500'
 bgAccentColor: 'bg-red-300'
 isSquare: true
+coverImage: 'egm-01.png'
 
 
 ---
