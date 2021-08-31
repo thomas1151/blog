@@ -6,7 +6,9 @@ summary: "I have worked alongside companies in the telecoms and insurance indust
 url: 'thomasbarratt.co.uk'
 isSquare: true
 coverImage: 'cover.png'
-
+bgColor: 'bg-primary'
+borderColor: 'border-blue-500'
+bgAccentColor: 'bg-primary'
 ---
 
 > 2017 - Present.
