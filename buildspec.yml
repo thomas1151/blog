@@ -9,7 +9,7 @@ phases:
   install:
     commands:
       - echo Install nvm for latest Node
-      - set +a
+      - set -a
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
       - NVM_DIR=/root/.nvm
       - chmod +x ~/.nvm/nvm.sh
