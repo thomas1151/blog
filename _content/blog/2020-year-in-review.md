@@ -54,7 +54,8 @@ And then, my flatmates Conall and Lee, and their friends (Gina), and the lovely 
 
 You know that clicking feeling? You *do* know that clicking feeling. You've had it a few times in your life. That click makes you put your inhibitions to the side, makes you open up and spill your secrets, and talk about the things that make you embarrassed. The click is the key opening the vault of vulnerability, and there is no locksmith in the world that can copy it. I've learned to trust the click. 
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8b9dc45e-b0e1-4c09-bfab-78e5c1e727b7/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8b9dc45e-b0e1-4c09-bfab-78e5c1e727b7/Untitled.png)
+![Fire!](/assets/blog/2020-year-in-review/fire.png "Fire!")
+
 
 Working for Amazon Web Services has been everything I anticipated and more. I am indebted to my team there, who have let me explore in my style, to niches of Amazon and software engineering I did not anticipate to uncover. Working with the RDS team has been rewarding and just generally lovely, and my technical skills have improved considerably. Specifically, dealing with CI/CD, pipelining processes, and mentally dealing with a system that is too complex to understand in its entirety have been the big takeaways so far. Unobserved and unobservable complexity are two areas that my work (and personal life) have focussed on, and trying to deal with the concept of known knowns, known unknowns, and unknowns in a professional setting at such scale are skills are know I would not have been able to develop to the degree I have anywhere else but Amazon. 
 
