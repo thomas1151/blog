@@ -28,7 +28,7 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
                                         <Link href="/">
                                             <a className="flex">
                                                 <span className="sr-only">Thomas Barratt</span>
-                                                <div className="h-8 sm:h-10 inline-block w-12 logo"/>
+                                                <div className="h-8 sm:h-10 inline-block w-12 logo bg-white"/>
                                                 { (!(atTop) || alwaysShowTitle)  && <span className="text-2xl px-4 font-display tracking-tighter leading-tight text-white align-middle self-center">Thomas Barratt</span>}
                                             </a>
                                         </Link>
@@ -72,7 +72,7 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
                             <div className="rounded-lg bg-white dark:bg-gray-900 ring-1 ring-black ring-opacity-5 overflow-hidden">        
                                 <div className="px-5 pt-4 flex items-center justify-between">
                                 <div>
-                                    <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt=""/>
+                                    <div className="h-8 sm:h-10 inline-block w-12 logo bg-primary"/>
                                 </div>
                                 <div className="-mr-2">
                                     <button onClick={() => { setIsMenuActive(!isMenuActive) }} type="button" className="bg-white dark:bg-gray-800 dark:hover:bg-gray-700 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

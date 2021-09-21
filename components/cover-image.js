@@ -6,7 +6,6 @@ import { useRef } from 'react';
 import { useContainerDimensions } from '../hooks/useContainerDimensions'
 
 export default function CoverImage({ title, src, slug, isSquare, urlPacket, customSizing }) {
-  console.log(src)
   const componentRef = useRef()
   const { width } = useContainerDimensions(componentRef)
 

@@ -93,7 +93,6 @@ header li{
 }
 
 .logo{
-  background-color: white;
-  -webkit-mask: url(/logo.svg) no-repeat center;
-  mask: url(/logo.svg) no-repeat center;
-}
+  -webkit-mask: url(/logo.svg) no-repeat left;
+  mask: url(/logo.svg) no-repeat left;
+} 

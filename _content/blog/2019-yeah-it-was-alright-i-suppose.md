@@ -15,7 +15,7 @@ borderColor: "border-purple-900"
 
 > A good year is difficult to define, but a bad one isn't. An alright year? Well, now we're talking.
 
-![Gdansk 2019.](/assets/posts/2019-yeah-it-was-alright-i-suppose/cover.jpg "Gdansk 2019.")
+![Gdansk 2019.](/assets/blog/2019-yeah-it-was-alright-i-suppose/cover.jpg "Gdansk 2019.")
 
 The days start, the weeks end. The months begin, the years pass away. And just as the millennia of previous years, 2019 has not broken the trend. Generally, 2019 was a positive year for me. I'm fortunate, I come from a time and place where I don't have to worry about my safety, or my health, even if others are not so lucky. After some personal tumultuous flash-points that I can point to through the year, I'd say that generally, I leave 2019 and enter 2020 not desiring a 'new year, new me', but rather, 'new year, same me, with the stipulation that I continue to grow in a similar way to that of the latter half of the previous year' - although I can see why the former mindset has gained more traction.
 
