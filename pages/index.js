@@ -5,7 +5,7 @@ import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { API } from '../lib/api'
 import Head from 'next/head'
-import { CMS_NAME, DESCRIPTION } from '../lib/constants'
+import { CMS_NAME, DESCRIPTION, HOME_OG_IMAGE_URL } from '../lib/constants'
 import GenericCard from '../components/generic-card'
 export default function Index({posts, components, experience}) {
 
@@ -16,6 +16,7 @@ export default function Index({posts, components, experience}) {
       <Layout>
           <Head>
             <title>Howdy! | {CMS_NAME} | {DESCRIPTION} </title>
+            <meta property="og:image" content={HOME_OG_IMAGE_URL}></meta>
           </Head>
               <Intro {...components.hero} />
           <Container className="px-4 relative" showToggles>

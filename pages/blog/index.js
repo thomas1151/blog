@@ -6,11 +6,16 @@ import { API } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import GenericCard from '../../components/generic-card'
 import MoreStories from '../../components/more-stories'
+import { CMS_NAME, DESCRIPTION } from '../../lib/constants'
+import Head from 'next/head'
 
 export default function PostIndex({ posts, content, preview }) {
     const router = useRouter();
     return (
         <Layout preview={preview}>
+            <Head>
+            <title>{content.title} | {CMS_NAME} | {DESCRIPTION} </title>
+            </Head>
             <Header {...content} alwaysShowTitle={true} />
             <Container>
                 {router.isFallback ? (

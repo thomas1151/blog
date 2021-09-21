@@ -3,7 +3,7 @@ import ErrorPage from 'next/error'
 import PostBody from '../../components/post-body'
 import { API } from '../../lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
+import { CMS_NAME, DESCRIPTION } from '../../lib/constants'
 import markdownToReact from '../../lib/markdownToReact'
 import BasicPage from '../../layouts/basic-page'
 
@@ -16,10 +16,14 @@ export default function Post({ post, morePosts, preview }) {
         <BasicPage post={post} router={router} smallHeader={true}>
             <div className="mb-32 max-w-screen-xl">
                 <Head>
-                    <title>
-                        {post.title} | {CMS_NAME}
-                    </title>
+                    <Head>
+                        <title>{post.title}| {CMS_NAME} | {DESCRIPTION} </title>
+                    </Head>
                     <meta property="og:image" content={post.ogImage.url} />
+                    <meta property="og:title" content={post.title}/>
+                    <meta property="og:site_name" content={`${CMS_NAME} | ${DESCRIPTION}`}/>
+                    <meta property="og:description" content={post.summary}/>
+                    <meta property="og:type" content="article"/>
                 </Head>
                 <PostBody content={markdownToReact(post.content || '')} contentMeta={<>Published: <strong>{new Date(post.date).toLocaleDateString()}</strong></>} />
             </div>

@@ -16,7 +16,7 @@ bgColor: "bg-purple-900"
 borderColor: "border-purple-900"
 ---
 
-> Published on 29/12/2020.  
+> Originally published on 29/12/2020.  
 > Updated on 24/05/2021 for new site launch.  
   
    
