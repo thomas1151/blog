@@ -6,18 +6,30 @@ import { API } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import GenericCard from '../../components/generic-card'
 import MoreStories from '../../components/more-stories'
-import { CMS_NAME, DESCRIPTION } from '../../lib/constants'
 import Head from 'next/head'
+import { useState, useEffect } from 'react'
+import { CMS_NAME, DESCRIPTION, HOME_OG_IMAGE_URL } from '../../lib/constants'
 
 export default function PostIndex({ posts, content, preview }) {
     const router = useRouter();
+
+    const [protocolAndHost, setProtocolAndHost] = useState();
+    useEffect(() => {
+        setProtocolAndHost(window.location.protocol + '//' +global.window.location.host);
+    }, []);
+
     return (
         <Layout preview={preview}>
             <Head>
-            <title>{content.title} | {CMS_NAME} | {DESCRIPTION} </title>
+                <title>{content.title} | {CMS_NAME} | {DESCRIPTION} </title>
+                <meta property="og:title" content={`${content.title} | ${CMS_NAME}`} />
+                <meta property="og:site_name" content={`${CMS_NAME} | ${DESCRIPTION}`}/>
+                <meta property="og:description" content={content.summary}/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:image" content={protocolAndHost+HOME_OG_IMAGE_URL}></meta>
             </Head>
             <Header {...content} alwaysShowTitle={true} />
-            <Container>
+            <Container className="px-4">
                 {router.isFallback ? (
                     <PostTitle>Loading…</PostTitle>
                 ) : (

@@ -41,7 +41,7 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
                                         >
                                             <span className="sr-only">Open main menu</span>
                                             <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                                             </svg>
                                         </button>
                                         </div>
@@ -49,7 +49,7 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
                                 </div>
                                 <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                                 {MENUITEMS.map((menuItem) => (
-                                    <Link href={menuItem.href}>
+                                    <Link href={menuItem.href} key={menuItem.href}>
                                         <a className="text-lg text-gray-100 font-medium hover:text-gray-900 hover:border-gray-900 dark:hover:text-secondary dark:hover:border-secondary border-dashed border-b-2">{menuItem.title}</a>
                                     </Link>
                                 ))}
@@ -78,7 +78,7 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
                                     <button onClick={() => { setIsMenuActive(!isMenuActive) }} type="button" className="bg-white dark:bg-gray-800 dark:hover:bg-gray-700 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                                         <span className="sr-only">Close main menu</span>
                                         <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden={!isMenuActive}>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                                         </svg>
                                     </button>
                                 </div>
@@ -88,7 +88,7 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
                                         <a className="block px-3 py-2 rounded-md text-base font-medium hover:text-gray-900 dark:hover:text-yellow-500 hover:bg-gray-50 dark:hover:bg-gray-800 dark:text-white">Home</a>
                                     </Link>
                                     {MENUITEMS.map((menuItem) => (
-                                        <Link href={menuItem.href}>
+                                        <Link href={menuItem.href} key={menuItem.href}>
                                             <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:hover:text-blue-400 hover:text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 ">{menuItem.title}</a>
                                         </Link>
                                     ))}

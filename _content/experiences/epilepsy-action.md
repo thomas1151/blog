@@ -13,7 +13,7 @@ coverImage: 'egm-01.png'
 
 ---
 
-![ESPENTE EGM](/assets/experiences/epilepsy-action/map.png "ESPENTE EGM")
+![ESPENTE EGM](/assets/experience/epilepsy-action/map.png "ESPENTE EGM")
 
 
 Epilepsy Action commissioned researchers at the University of Sheffield to carry out a systematic mapping review, looking at evidence to describe the role of the epilepsy specialist nurse. They looked at the type and quality of the evidence and the evidence gaps. All papers identified were ‘mapped’ (see below) according to the sub-roles and the type of evidence.

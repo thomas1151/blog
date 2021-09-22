@@ -6,6 +6,7 @@ import { useContainerDimensions} from '../hooks/useContainerDimensions'
 import { useRef } from 'react'
 import SectionTitle from './sectionTitle'
 import { generateAwsImage } from '../lib/utils'
+import markdownToReact from '../lib/markdownToReact';
 
 export default function GenericCard({ title, content, image, className, showTitle=true, imageAlt="", moreUrl, children }) {
     const componentRef = useRef()
@@ -21,7 +22,7 @@ export default function GenericCard({ title, content, image, className, showTitl
                     <div
                         className={`${markdownStyles['markdown']} px-4 py-2  ${image ? 'w-full md:w-3/4' : ' w-full'}`}
                     >
-                        {content}
+                        {markdownToReact(content)}
                     </div> 
                 }
                 { children }

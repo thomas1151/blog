@@ -6,21 +6,27 @@ import Head from 'next/head'
 import { CMS_NAME, DESCRIPTION } from '../../lib/constants'
 import markdownToReact from '../../lib/markdownToReact'
 import BasicPage from '../../layouts/basic-page'
+import { generateAssetUrl, generateAwsImage } from '../../lib/utils'
+import { useState, useEffect } from 'react'
 
 export default function Post({ post, morePosts, preview }) {
     const router = useRouter()
     if (!router.isFallback && !post?.slug) {
         return <ErrorPage statusCode={404} />
     }
+
+    // const [protocolAndHost, setProtocolAndHost] = useState();
+    // useEffect(() => {
+    //     setProtocolAndHost(window.location.protocol + '//' +global.window.location.host);
+    // }, []);
+
     return (
         <BasicPage post={post} router={router} smallHeader={true}>
             <div className="mb-32 max-w-screen-xl">
                 <Head>
-                    <Head>
-                        <title>{post.title}| {CMS_NAME} | {DESCRIPTION} </title>
-                    </Head>
-                    <meta property="og:image" content={post.ogImage.url} />
-                    <meta property="og:title" content={post.title}/>
+                    <title>{post.title} | {CMS_NAME} | {DESCRIPTION} </title>
+                    <meta property="og:image" content={`${generateAwsImage({src: generateAssetUrl(post.componentType, post.slug,  post.ogImage.url), width: 1024})}`} />
+                    <meta property="og:title" content={`${post.title} | ${CMS_NAME}`} />
                     <meta property="og:site_name" content={`${CMS_NAME} | ${DESCRIPTION}`}/>
                     <meta property="og:description" content={post.summary}/>
                     <meta property="og:type" content="article"/>

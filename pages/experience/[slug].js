@@ -6,7 +6,7 @@ import Head from 'next/head'
 import markdownToReact from '../../lib/markdownToReact'
 import BasicPage from '../../layouts/basic-page'
 import GenericCard from '../../components/generic-card'
-import { generateAssetUrl } from '../../lib/utils'
+import { generateAssetUrl, generateAwsImage} from '../../lib/utils'
 import { CMS_NAME, DESCRIPTION } from '../../lib/constants'
 
 export default function Experience({ post, morePosts, preview }) {
@@ -21,11 +21,11 @@ export default function Experience({ post, morePosts, preview }) {
                 <title>
                     {post.title} | {CMS_NAME} | {DESCRIPTION}
                 </title>
-                <meta property="og:title" content={post.title}/>
+                <meta property="og:title" content={`${post.title} | ${CMS_NAME}`} />
                 <meta property="og:site_name" content={`${CMS_NAME} | ${DESCRIPTION}`}/>
                 <meta property="og:description" content={post.summary}/>
                 <meta property="og:type" content="article"/>
-                <meta property="og:image" content={post.coverImage}/>
+                <meta property="og:image" content={`${generateAwsImage({src: generateAssetUrl(post.componentType, post.slug,  post.coverImage), width: 1024})}`} />
             </Head>
             <PostBody content={markdownToReact(post.content || '')} />
         </BasicPage>

@@ -7,16 +7,28 @@ import { API } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME, DESCRIPTION, HOME_OG_IMAGE_URL } from '../lib/constants'
 import GenericCard from '../components/generic-card'
-export default function Index({posts, components, experience}) {
+import { useState, useEffect } from 'react'
 
+export default function Index({posts, components, experience}) {
   const heroPost = posts[0]
   const morePosts = posts.slice(1)
+
+  const [protocolAndHost, setProtocolAndHost] = useState();
+  useEffect(() => {
+      setProtocolAndHost(window.location.protocol + '//' +global.window.location.host);
+  }, []);
+
   return (
     <>
       <Layout>
           <Head>
             <title>Howdy! | {CMS_NAME} | {DESCRIPTION} </title>
             <meta property="og:image" content={HOME_OG_IMAGE_URL}></meta>
+            <meta property="og:title" content={`${heroPost.title} | ${CMS_NAME}`} />
+            <meta property="og:site_name" content={`${CMS_NAME} | ${DESCRIPTION}`}/>
+            <meta property="og:description" content={heroPost.content}/>
+            <meta property="og:type" content="website"/>
+            <meta property="og:image" content={protocolAndHost+HOME_OG_IMAGE_URL}></meta>
           </Head>
               <Intro {...components.hero} />
           <Container className="px-4 relative" showToggles>
