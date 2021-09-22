@@ -23,10 +23,9 @@ export default function Index({posts, components, experience}) {
       <Layout>
           <Head>
             <title>Howdy! | {CMS_NAME} | {DESCRIPTION} </title>
-            <meta property="og:image" content={HOME_OG_IMAGE_URL}></meta>
-            <meta property="og:title" content={`${heroPost.title} | ${CMS_NAME}`} />
+            <meta property="og:title" content={`Howdy! | ${CMS_NAME} | ${DESCRIPTION}`} />
             <meta property="og:site_name" content={`${CMS_NAME} | ${DESCRIPTION}`}/>
-            <meta property="og:description" content={heroPost.content}/>
+            <meta property="og:description" content={components.hero.summary}/>
             <meta property="og:type" content="website"/>
             <meta property="og:image" content={protocolAndHost+HOME_OG_IMAGE_URL}></meta>
           </Head>
