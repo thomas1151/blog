@@ -8,6 +8,5 @@ Yo! I am a **Software Development Engineer (Full Stack/Web)**, **MComp CompSci +
 I have interests in ownership, visibility and infrastructure, and I like to make systems that work as (and show that they are working as) expected.
 
  - [LinkedIn](https://linkedin.com/in/thomas1151)
- - [Email](mailto:thomas@thomasbarratt.co.uk)
  - [Twitter](https://twitter.com/thomas_1151)
 
