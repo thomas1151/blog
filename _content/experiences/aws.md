@@ -2,7 +2,7 @@
 title: 'Amazon Web Services'
 # image: '/assets/components/hello/face.png'
 subtitle: 'A placement year working on mission critical software for one of the biggest tech companies in the world.'
-summary: "Lead a project to design, develop and provision production-grade infrastructure for an ElasticSearch-based observability stack - over 3 million daily log entries in over 27 regions. Implemented features and fixed bugs in some of RDS' mission critical software."
+summary: "Lead a project to design, develop and provision production-grade infrastructure for an ElasticSearch-based observability stack - over 3 million daily log entries in over 27 regions. Eorked with the best team to implement features and fix bugs in some of RDS' mission critical software."
 url: 'https://aws.amazon.com/rds/'
 bgColor: "bg-amazon-orange"
 borderColor: "bg-amazon-orange"
@@ -25,15 +25,6 @@ This environment presents many challenges to the teams responsible for software 
 
 Particularly in areas of failure, ensuring the impact to customer experience is managed (if mitigation is not immediate) becomes an ancillary challenge. When (not if) things go wrong, customers desire (and deserve) to know the cause, effect to their operations, and constant updates and ETCs for fixes and resolution.
 
-For the RDS service, further complications; consequent to the nature of database engines and their own set of bugs, issues and points of failure; emerge. For the RDS service, diagnosing user issues becomes a two state problem - is it us, or is it them?
-
-In the event of these situations, AWS RDS engineers need some way to diagnose the health of customer instances, the status of required services the RDS service depends on, as well as the ability to execute SOPs to mediate the issues affecting the customer.
-
-With the 14 Leadership Principles of Amazon in mind, the formation of an RDS Platform Operations Console (); tasked with providing engineers the visibility needed to diagnose customer-specific issues, was a necessary step in internal SOP (Standard Operating Practices) evolution. Instead of each support engineer having their own workflow to diagnose issues, the OpsConsole’s standardized views (which provide the necessary information for the majority of issues) could be in front of engineers in seconds.
-
-Originally a side-project by members of the RDS team, the OpsConsole continued to grow into a key part of the RDS Platform infrastructure, garnering a user base that includes engineers from the customer support teams and the RDS Platform’s (and adjacent services’) engineers.
-
-My 11 month placement was on the team responsible for this piece of software. The OpsConsole Team of 6 (now 11), is tasked with being the operational centre of RDS support. With a mature codebase of some 10 years in parts, the OpsConsole user base has a set of time-sensitive expectations; regressions and uninformed changes to OpsConsole features are the big dangers.
 
 ## Me
 
@@ -43,7 +34,7 @@ The concept of instrumentation transcends the software industry; having some way
 
 Instrumentation works by logging state-dependent information for each request made to the software. For a web based application, client side state-dependent information (such as the page load time and the pages visited by a user), rely on the entire server process to have completed successfully. Internal instrumentation can log information regarding the specific program flows of requests (controllers accessed, parameters passed, permissions granted) whether the request has been completed successfully or not. This insight into failed requests allows developers to immediately glean more information about a given ticket; rather than just relying on a vague message, a backtrace along with some key controller parameters could shave days from a root cause analysis.
 
-Writing sufficient instrumentation for a tool that is over 10 years old in parts while also maintaining support for existing log-based workflows poses a real challenge. Without fully understanding the dependencies of the system, regressions in the OpsConsole’s interfaces to some of the most vital areas of the AWS project management infrastructure could creep in - leaving the OpsConsole potentially blind to AWS alarms and canaries.
+Writing sufficient instrumentation for a tool that is over 10 years old in parts while also maintaining support for existing log-based workflows poses a real challenge. Without fully understanding the dependencies of the system, regressions in my team's software's interfaces to some of the most vital areas of the AWS project management infrastructure could creep in - leaving our team potentially blind to alarms and canaries.
 
 The challenge of writing an instrumentation stack that gives this self-monitoring ability poses many threats, but also huge benefits. The ability to see below the black box of the software allows developers to glean more about how the system communicates with itself, providing greater scope for bug fixing and clearer integration paths for new features. This layer of self-monitoring - which allows for much larger visibility on the problems and workflows at large in a system - is the concept of Observability.
 
@@ -54,10 +45,6 @@ My placement project began with only this word - the project I delivered was the
 The bulk of the work contained within my placement focussed on a tool called ElasticSearch (now OpenSearch), which is designed to handle large amounts of data and provide indexing, analysis tools, and visualization abilities to the data stored within. OpenSearch is a complex tool with a decentralised nodal data storage pattern which relies on concepts of indexing and sharding to provide retrieval speeds not possible with standard relational database tooling.
 
 Using instrumentation to capture valuable state-based data would in theory provide the team with a greater resolution on the internal state of the software. However, without some way to interact with this data effectively, developers would be left with a harder problem than before; instead of having a few log entries to search for when diagnosing issues, they now would have those original log entries as well as new instrumentation-led entries - only increasing the needle in a haystack problem developers had already. OpenSearch was the answer to this. Providing unparalleled drill-down ability, developers could navigate from a high level metrics graph to individual log entries in less than 5 clicks.
-
-However, this complex internal structure poses some challenges when trying to add OpenSearch dependent tooling to an existing project. The original minimal log structure outputted a single line per debug entry, and request to the console. The lines corresponding to a request had a space delimited payload of minimal information regarding the request - sufficient for local debugging, but not sufficient for more advanced observability instrumentation outputs.
-
-The sparsity of the data contained within each log entry was not the only problem; OpenSearch requires a JSON input at its API endpoints, meaning that a conversion between log entries was also required.
 
 The conclusion of this is a project that runs with live production data, serving over 12 million requests across 21 different regions, using infrastructure designed and development independently.
 

@@ -3,7 +3,7 @@ title: '2019: Yeah, it was alright, I suppose.'
 subtitle: 'I review my 2019, taking time to spill emotional nonsense about personal growth.'
 summary: "Personal growth is a meta-construct that I know people are keen to shy away from. Introspective ballet, where one is to dance, grapple, with themselves and try and evaluate objectively the actions, but more importantly the thoughts and feelings is something I have often seen people try and repress. And I'm not to criticise that repression;it can often seem like a pointless endeavour. The only way to grow in a skill or ability is to do it, not think about it."
 coverImage: 'cover.jpg'
-date: '2020-03-19T05:35:07.322Z'
+date: '2020-01-19T05:35:07.322Z'
 author:
   name: Thomas Barratt
   picture: '/assets/blog/authors/tim.jpeg'

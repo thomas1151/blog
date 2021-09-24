@@ -3,12 +3,12 @@ title: 'Development and Continued Evolution'
 subtitle: 'An Ode to Technology Extra, my interest and my intentions.'
 summary: "The people have always been my favourite thing about working on projects. Going forward, I want to make these people, myself, and hopefully my potential partners in projects proud of the work I'm doing."
 coverImage: 'cover.png'
-date: '2020-03-19T05:35:07.322Z'
+date: '2018-01-15T05:35:07.322Z'
 author:
   name: Thomas Barratt
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
-  url: '/assets/posts/page/image.jfif'
+  url: 'cover.png'
 ---
 
 
