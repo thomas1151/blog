@@ -9,7 +9,7 @@
     "start": "NODE_ENV=production next start -p 3000"
   },
   "dependencies": {
-    "@types/react": "^17.0.14",
+    "@types/react": "^18.2.0",
     "chart.js": "^3.5.0",
     "chartjs-adapter-luxon": "^1.0.0",
     "chartjs-plugin-streaming": "^2.0.0",
@@ -34,7 +34,7 @@
     "remark-parse": "^9.0.0",
     "remark-react": "^8.0.0",
     "tailwindcss": "^2.1.2",
-    "typescript": "^4.3.5",
+    "typescript": "^4.5.2",
     "unified": "^9.2.1"
   }
 }
