@@ -14,8 +14,8 @@ phases:
       - chmod +x ~/.nvm/nvm.sh
       - set +a . /root/.nvm/nvm.sh && source /root/.nvm/nvm.sh && nvm install --lts
       - echo Installing dependency...
-      - npm install -g next
-      - npm install
+      - npm install --legacy-peer-deps -g next
+      - npm install --legacy-peer-deps
       
   build:
     commands:
