@@ -13,7 +13,7 @@ const convertBreadcrumb = string => {
 };
  
 const breadcrumbLink = ({ href, breadcrumb }) => (
-    <Link href={href}>
+    <Link href={href} legacyBehavior>
         <a className="">
             <span className="text-primary hover:text-yellow-500">
                 {convertBreadcrumb(breadcrumb)}

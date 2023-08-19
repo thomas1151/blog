@@ -12,7 +12,7 @@ export default function CoverImage({ title, src, slug, isSquare, urlPacket, cust
   return (
 
     slug ? (
-        <Link as={urlPacket.as} href={urlPacket.href}>
+        <Link as={urlPacket.as} href={urlPacket.href} legacyBehavior>
           <a  aria-label={title} className={cn("sm:mx-0 overflow-hidden bg-center bg-no-repeat block",
             {'bg-contain my-4': isSquare})}
               style={{backgroundImage: `url(${generateAwsImage({src, width, quality: 125})})`}} 

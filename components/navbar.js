@@ -25,7 +25,7 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
                             <nav className="relative flex items-center justify-between sm:h-10" aria-label="Global">
                                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                                     <div className="flex items-center justify-between w-full md:w-auto">
-                                        <Link href="/">
+                                        <Link href="/" legacyBehavior>
                                             <a className="flex">
                                                 <span className="sr-only">Thomas Barratt</span>
                                                 <div className="h-8 sm:h-10 inline-block w-12 logo bg-white"/>
@@ -49,7 +49,7 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
                                 </div>
                                 <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                                 {MENUITEMS.map((menuItem) => (
-                                    <Link href={menuItem.href} key={menuItem.href}>
+                                    <Link href={menuItem.href} key={menuItem.href} legacyBehavior>
                                         <a className="text-lg text-gray-100 font-medium hover:text-gray-900 hover:border-gray-900 dark:hover:text-secondary dark:hover:border-secondary border-dashed border-b-2">{menuItem.title}</a>
                                     </Link>
                                 ))}
@@ -84,11 +84,11 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
                                 </div>
                                 </div>
                                 <div className="px-2 pt-2 pb-3 space-y-1">
-                                    <Link href="/">
+                                    <Link href="/" legacyBehavior>
                                         <a className="block px-3 py-2 rounded-md text-base font-medium hover:text-gray-900 dark:hover:text-yellow-500 hover:bg-gray-50 dark:hover:bg-gray-800 dark:text-white">Home</a>
                                     </Link>
                                     {MENUITEMS.map((menuItem) => (
-                                        <Link href={menuItem.href} key={menuItem.href}>
+                                        <Link href={menuItem.href} key={menuItem.href} legacyBehavior>
                                             <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:hover:text-blue-400 hover:text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 ">{menuItem.title}</a>
                                         </Link>
                                     ))}

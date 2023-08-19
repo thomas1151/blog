@@ -26,7 +26,7 @@ export default function HeroPost({
       <div className=" md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 px-4">
         <div className="border-r border-gray-100 dark:border-gray-600">
           <h3 className="mb-4 text-3xl lg:text-3xl leading-tight pt-4">
-            <Link as={url.as} href={url.href}>
+            <Link as={url.as} href={url.href} legacyBehavior>
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>
