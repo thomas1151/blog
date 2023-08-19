@@ -1,7 +1,7 @@
 ---
 title: 'Kerry 2023'
 subtitle: 'Went. Drank. Played Cornet. Swam. A moment out of time.'
-summary: "What an incredible time! Swimming, playing, having the crack; a real moment in time I will treasure forever."
+summary: "What an incredible time! Swimming, playing, having the crack; a real moment in time I will treasure forever. This isn't so much of a post as a shortcut to a YouTube video, but, it's something."
 coverImage: 'cover.jpg'
 date: '2023-08-19T20:14:35.000Z'
 author:

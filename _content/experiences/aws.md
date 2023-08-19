@@ -2,7 +2,7 @@
 title: 'Amazon Web Services'
 # image: '/assets/components/hello/face.png'
 subtitle: 'A placement year working on mission critical software for one of the biggest tech companies in the world.'
-summary: "Lead a project to design, develop and provision production-grade infrastructure for an ElasticSearch-based observability stack - over 3 million daily log entries in over 27 regions. Eorked with the best team to implement features and fix bugs in some of RDS' mission critical software."
+summary: "Lead a project to design, develop and provision production-grade infrastructure for an ElasticSearch-based observability stack - over 3 million daily log entries in over 27 regions. Worked with the best team to implement features and fix bugs in some of RDS' mission critical software."
 url: 'https://aws.amazon.com/rds/'
 bgColor: "bg-amazon-orange"
 borderColor: "bg-amazon-orange"

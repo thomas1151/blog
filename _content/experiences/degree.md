@@ -2,7 +2,7 @@
 title: 'Masters in Computer Science and Artificial Intelligence (with a Year in Industry)'
 # image: '/assets/components/hello/face.png'
 subtitle: 'My Computer Science and Artificial Intelligence Degree with Integrated Masters.'
-summary: "Educated as a MComp computer scientist at the University of Sheffield, one of the country's top 25 universities for Computer Science, and one of the top 125 universities in the world."
+summary: "Educated as a 1:1x MComp computer scientist at the University of Sheffield, one of the country's top 25 universities for Computer Science, and one of the top 125 universities in the world."
 url: 'thomasbarratt.co.uk'
 bgColor: 'bg-sheffield-purple'
 borderColor: 'bg-sheffield-purple'
