@@ -1,6 +1,7 @@
 import cn from 'classnames'
 import Link from 'next/link';
 import { useState } from 'react'
+import { propertyStrings } from './constants';
 
 const MENUITEMS = [
     { title: 'Blog', href:"/blog" },
@@ -27,9 +28,9 @@ export default function NavBar({ atTop, alwaysShowTitle, bgColor, isHeaderImage 
                                     <div className="flex items-center justify-between w-full md:w-auto">
                                         <Link href="/" legacyBehavior>
                                             <a className="flex">
-                                                <span className="sr-only">Thomas Barratt</span>
+                                                <span className="sr-only">{propertyStrings.title}</span>
                                                 <div className="h-8 sm:h-10 inline-block w-12 logo bg-white"/>
-                                                { (!(atTop) || alwaysShowTitle)  && <span className="text-2xl px-4 font-display tracking-tighter leading-tight text-white align-middle self-center">Thomas Barratt</span>}
+                                                { (!(atTop) || alwaysShowTitle)  && <span className="text-2xl px-4 font-display font-bold tracking-tight leading-tight text-white align-middle self-center">{propertyStrings.title}</span>}
                                             </a>
                                         </Link>
                                         <div className="-mr-2 flex items-center md:hidden">

@@ -4,9 +4,9 @@
     "display": "browser",
     "scope": "/",
     "start_url": "/",
-    "name": "Thomas Barratt: Software Development Engineer",
-    "short_name": "Thomas Barratt",
-    "description": "Welcome. I'm Thomas Barratt; a Software Development Engineer with interests in Ownership, Visibility and Infrastructure.",
+    "name": "Tom Barratt: Software Development Engineer",
+    "short_name": "Tom Barratt",
+    "description": "Welcome. I'm Tom Barratt; a Software Development Engineer with interests in Ownership, Visibility and Infrastructure.",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

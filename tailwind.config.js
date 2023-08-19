@@ -50,10 +50,10 @@ module.exports = {
       borderColor: customColors,
     },
     fontFamily: {
-      'display': ['Poppins', "sans-serif"],
-      'body': ["Roboto Slab", "serif"],
-      'sans-serif': ['Poppins', "sans-serif"],
-      'serif': ["Roboto Slab", "serif"]
+      'display': ['Playfair Display', "serif"],
+      'body': ["IBM Plex Sans", "sans-serif"],
+      'sans-serif': ['Playfair Display', "serif"],
+      'serif': ["IBM Plex Sans", "sans-serif"]
     }
   },
   variants: {},

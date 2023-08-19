@@ -5,7 +5,7 @@ import { generateAwsImage } from '../lib/utils'
 import { useRef } from 'react';
 import { useContainerDimensions } from '../hooks/useContainerDimensions'
 
-export default function CoverImage({ title, src, slug, isSquare, urlPacket, customSizing }) {
+export default function CoverImage({ title, src, slug, isSquare, urlPacket, customSizing, className }) {
   const componentRef = useRef()
   const { width } = useContainerDimensions(componentRef)
   const ImageWidther = () => <div  ref={componentRef} className={cn('relative w-full pb-2/3', {[`${customSizing}`]: customSizing, 'sm:pb-1/2': !customSizing})}/>
@@ -14,7 +14,10 @@ export default function CoverImage({ title, src, slug, isSquare, urlPacket, cust
     slug ? (
         <Link as={urlPacket.as} href={urlPacket.href} legacyBehavior>
           <a  aria-label={title} className={cn("sm:mx-0 overflow-hidden bg-center bg-no-repeat block",
-            {'bg-contain my-4': isSquare})}
+            {
+              'bg-contain my-4': isSquare,
+              [className]: className,   
+            })}
               style={{backgroundImage: `url(${generateAwsImage({src, width, quality: 125})})`}} 
           >
             <ImageWidther/>
@@ -23,7 +26,10 @@ export default function CoverImage({ title, src, slug, isSquare, urlPacket, cust
 
     ): (
       <div className={cn("sm:mx-0 overflow-hidden bg-center bg-no-repeat",
-        {'bg-contain my-4': isSquare})}
+        {
+          'bg-contain my-4': isSquare,
+          [className]: className,
+        })}
           style={{backgroundImage: `url(${generateAwsImage({src, width, quality: 125})})`}} 
       >
         <ImageWidther/>

@@ -3,6 +3,7 @@ import { EXAMPLE_PATH } from '../lib/constants'
 import DateFormatter from './date-formatter'
 import { BiRightArrowCircle } from "react-icons/bi";
 import FormattedExternalLink from './link';
+import { propertyStrings } from './constants';
 
 
 const FOOTER_LINKS = [
@@ -16,8 +17,8 @@ export default function Footer() {
       <div className="mx-auto bg-blue-800 w-full  px-4 mb-6 pt-4 lg:px-0 shadow-sm"/>
       <Container>
         <div className="flex flex-col lg:flex-row items-left sm:items-center ">
-          <a href="/" className="text-2xl font-display tracking-tighter leading-tight text-center lg:text-left sm:mb-8 lg:mb-0 lg:pr-4 lg:w-1/4 py-4">
-            Thomas Barratt
+          <a href="/" className="text-2xl font-display font-bold tracking-tighter leading-tight text-center lg:text-left sm:mb-8 lg:mb-0 lg:pr-4 lg:w-1/4 py-4">
+            {propertyStrings.title}
           </a>
           <div className="flex flex-col lg:flex-row justify-start sm:justify-center sm:items-center lg:pl-4 flex-grow	">
             {FOOTER_LINKS.map((link) => (

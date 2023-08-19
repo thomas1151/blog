@@ -47,7 +47,7 @@ export const Breadcrumbs = () => {
 
     
     return (
-        <nav aria-label="breadcrumbs" className="inline-block hover:text-primary">
+        <nav aria-label="breadcrumbs" className="inline-block hover:text-primary font-body font-bold">
             <ol className="breadcrumb">
                 {breadcrumbLink({ href: '/', breadcrumb: 'Home'})}
                 {breadcrumbs.map((breadcrumb, i) => {

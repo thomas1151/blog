@@ -17,10 +17,10 @@ export default function GenericCard({ title, content, image, className, showTitl
     return(
         <div className={cn("w-full z-10 ", {[className]: className})}>
             {showTitle && title && <SectionTitle title={title} moreUrl={moreUrl} />}
-            <div className='w-full flex flex-wrap shadow-md bg-white dark:bg-gray-900 dark:text-gray-50 self-center' >
+            <div className='w-full flex flex-wrap shadow-md bg-white dark:bg-gray-900 dark:text-gray-50 self-center rounded-lg' >
                 { content &&
                     <div
-                        className={`${markdownStyles['markdown']} px-4 py-2  ${image ? 'w-full md:w-3/4' : ' w-full'}`}
+                        className={`${markdownStyles['markdown']} px-4 py-4  ${image ? 'w-full md:w-3/4' : ' w-full'}`}
                     >
                         {markdownToReact(content)}
                     </div> 
