@@ -5,7 +5,7 @@ summary: "Yo! I am a Software Development Engineer at Amazon Web Services, Full 
 
 Yo! I am a **Software Development Engineer** working in **RDS (Amazon Web Services)** in Dublin.
 
-I have interests in ownership, visibility and infrastructure; I like to make systems that work, and show they work as, expected. Playing the cornet is my favourite hobby; **let's jam**.
+I have interests in ownership, visibility and infrastructure; I like to make systems that work and show they work as expected. Playing the cornet is my favourite hobby; **let's jam**.
 
  - [LinkedIn](https://linkedin.com/in/thomas1151)
 
