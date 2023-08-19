@@ -4,6 +4,7 @@ import NavBar from './navbar'
 import React, { useState, useRef, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer'
 import markdownToReact from '../lib/markdownToReact';
+import useFormattedDate from '../hooks/useFormattedDate';
 
 export default function Header(props) {
 
@@ -46,7 +47,8 @@ export default function Header(props) {
         <div ref={ref} className={`md:flex rounded-lg ${props.smallHeader ? 'pb-20 pt-36' : 'pb-40 md:pb-44 pt-32 md:pt-52'} justify-left text-white dark:text-gray-50 relative max-w-screen-xl mx-auto px-4 xl:px-0 z-40`}>
           <div className='text-left sm:px-4'>
             <h2 className={cn('lg:text-7xl font-display font-bold tracking-tight leading-none', {'mb-4': !props.date, 'text-5xl': !props.bigText, 'text-6xl': props.bigText})}>{props.title}</h2>
-            {props.date && <div className='text-2xl font-display md:text-3xl tracking-tight opacity-90 pb-4 mb-4'>{ new Date(props.date).toLocaleDateString()}</div>}
+            {/* TODO: REMOVE FROM HERE; THIS IS COUPLING */}
+            {props.date && <div className='text-2xl font-display md:text-3xl tracking-tight opacity-90 pb-4 mb-4'>{ useFormattedDate(props.date) }</div>}
             <div className='text-2xl md:text-3xl font-light tracking-tight opacity-90'> {markdownToReact(props.subtitle)} </div>
           </div>
         </div>

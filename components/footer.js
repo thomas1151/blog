@@ -1,7 +1,4 @@
 import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
-import DateFormatter from './date-formatter'
-import { BiRightArrowCircle } from "react-icons/bi";
 import FormattedExternalLink from './link';
 import { propertyStrings } from './constants';
 

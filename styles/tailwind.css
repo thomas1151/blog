@@ -99,3 +99,7 @@ header li{
   -webkit-mask: url(/logo.svg) no-repeat left;
   mask: url(/logo.svg) no-repeat left;
 } 
+
+.markdown iframe {
+  @apply w-full px-8 h-96 py-4
+}

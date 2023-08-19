@@ -1,9 +1,6 @@
-import markdownStyles from './markdown-styles.module.css'
 import { Breadcrumbs } from './breadcrumbs'
 
 export default function PostBody({ content, contentMeta }) {
-  const example = Breadcrumbs();
-
   return (
     <>
 
@@ -18,7 +15,7 @@ export default function PostBody({ content, contentMeta }) {
       } */}
       <div className="max-w-screen-lg shadow-md border-gray-300 p-4 sm:p-8 bg-white dark:bg-gray-900 rounded-b-lg">
         <div
-          className={`${markdownStyles['markdown']} markdown dark:text-white`}
+          className={`markdown dark:text-white`}
         >
          { content }
         </div>

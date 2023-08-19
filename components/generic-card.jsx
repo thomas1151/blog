@@ -20,7 +20,7 @@ export default function GenericCard({ title, content, image, className, showTitl
       <div className='w-full flex flex-wrap shadow-md bg-white dark:bg-gray-900 dark:text-gray-50 self-center rounded-lg' >
         { content &&
           <div
-          className={`${markdownStyles['markdown']} px-4 py-4  ${image ? 'w-full md:w-3/4' : ' w-full'}`}
+          className={`px-4 py-4  ${image ? 'w-full md:w-3/4' : ' w-full'}`}
           >
           {markdownToReact(content)}
           </div> 
