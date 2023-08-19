@@ -21,7 +21,7 @@ export default function ExperienceIndex({ experience, content, preview }) {
     return (
         <Layout preview={preview}>
             <Head>
-                <title>{content.title} | {CMS_NAME} | {DESCRIPTION} </title>
+                <title>{`${content.title} | ${CMS_NAME} | ${DESCRIPTION}`}</title>
                 <meta property="og:title" content={`${content.title} | ${CMS_NAME}`} />
                 <meta property="og:site_name" content={`${CMS_NAME} | ${DESCRIPTION}`}/>
                 <meta property="og:description" content={content.summary}/>

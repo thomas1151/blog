@@ -24,7 +24,7 @@ export default function Post({ post, morePosts, preview }) {
         <BasicPage post={post} router={router} smallHeader={true}>
             <div className="mb-32 max-w-screen-xl">
                 <Head>
-                    <title>{post.title} | {CMS_NAME} | {DESCRIPTION} </title>
+                    <title>{`${post.title} | ${CMS_NAME} | ${DESCRIPTION}`}</title>
                     <meta property="og:image" content={`${generateAwsImage({src: generateAssetUrl(post.componentType, post.slug,  post.ogImage.url), width: 1024})}`} />
                     <meta property="og:title" content={`${post.title} | ${CMS_NAME}`} />
                     <meta property="og:site_name" content={`${CMS_NAME} | ${DESCRIPTION}`}/>

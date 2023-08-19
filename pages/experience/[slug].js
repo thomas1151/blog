@@ -19,7 +19,7 @@ export default function Experience({ post, morePosts, preview }) {
         <BasicPage post={post} router={router} sidebar={sidebar} disableHeaderImage={true} alwaysShowTitle={true} >
             <Head>
                 <title>
-                    {post.title} | {CMS_NAME} | {DESCRIPTION}
+                    {`${post.title} | ${CMS_NAME} | ${DESCRIPTION}`}
                 </title>
                 <meta property="og:title" content={`${post.title} | ${CMS_NAME}`} />
                 <meta property="og:site_name" content={`${CMS_NAME} | ${DESCRIPTION}`}/>

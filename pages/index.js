@@ -22,7 +22,7 @@ export default function Index({posts, components, experience}) {
     <>
       <Layout>
           <Head>
-            <title>Howdy! | {CMS_NAME} | {DESCRIPTION} </title>
+            <title>{`Howdy! | ${CMS_NAME} | ${DESCRIPTION}`}</title>
             <meta property="og:title" content={`Howdy! | ${CMS_NAME} | ${DESCRIPTION}`} />
             <meta property="og:site_name" content={`${CMS_NAME} | ${DESCRIPTION}`}/>
             <meta property="og:description" content={components.hero.summary}/>
