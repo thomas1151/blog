@@ -44,13 +44,12 @@ export default function Index({posts, components, experience}) {
               />
               )}
             </div>
-
-            <div className="pb-8">
-              {morePosts.length > 0 && <MoreStories posts={morePosts} title="Other Ramblings" moreUrl='/blog' />}
-            </div>
+            {morePosts.length > 0 && <MoreStories posts={morePosts} title="Other Ramblings" moreUrl='/blog' />}
 
             <GenericCard {...components.experience} className="py-4 my-4" moreUrl='/experience'></GenericCard>
-            {experience.length > 0 && <MoreStories maxCols={3} posts={experience} />}
+            <div className="pb-8">
+              {experience.length > 0 && <MoreStories maxCols={3} posts={experience} />}
+            </div>
           </Container>
       </Layout>
     </>
