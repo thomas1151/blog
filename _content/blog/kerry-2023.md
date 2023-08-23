@@ -12,6 +12,8 @@ ogImage:
 
 <iframe src="https://www.youtube.com/embed/dvObhS8wxCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<iframe src="https://www.youtube.com/embed/6vbrw4K-m5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Went to Kerry! Had an incredible time. The people were amazing, the views spectacular, and the feeling of peace that emanates from the place is something else. To be able to sit and play my cornet with a bunch of trad musicians is something I will treasure forever. More music! More laughter! More of whatever that weekend was for sure.
 
 > Out there, beyond these hills  
